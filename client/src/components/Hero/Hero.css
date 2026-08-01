@@ -1,0 +1,94 @@
+.hero {
+  min-height: 80vh;
+
+  background-image:
+    linear-gradient(
+      rgb(5 18 40 / 0.65),
+      rgb(5 18 40 / 0.75)
+    ),
+    url("../../assets/images/hero/background.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+background-attachment: fixed;
+  display: flex;
+}
+
+.hero__overlay {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.hero__content {
+  color: white;
+  max-width: 700px;
+}
+
+.hero__eyebrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 1rem 0;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.hero__text {
+  max-width: 38rem;
+  margin-top: 2rem;
+    margin-bottom: 2.5rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgb(235 240 245);
+}
+
+.hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition);
+}
+
+.hero__button--primary {
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+
+.hero__button--primary:hover {
+  background-color: #28dbc2;
+}
+
+.hero__button--secondary {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.hero__button--secondary:hover {
+  background-color: rgb(255 255 255 / 0.1);
+}

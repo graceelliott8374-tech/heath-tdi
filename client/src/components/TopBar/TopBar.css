@@ -1,0 +1,35 @@
+.top-bar {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.top-bar__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 2.25rem;
+  gap: 1rem;
+}
+
+.top-bar__left,
+.top-bar__right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.top-bar a,
+.top-bar__right span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.top-bar a {
+  transition: color var(--transition);
+}
+
+.top-bar a:hover {
+  color: var(--color-accent);
+}

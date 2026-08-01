@@ -1,0 +1,88 @@
+.why-choose {
+  padding: 6rem 0;
+
+  background-image:
+    linear-gradient(
+      rgb(5 18 40 / 0.92),
+      rgb(5 18 40 / 0.92)
+    ),
+    url("../../assets/images/hero/background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.why-choose h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.why-choose__item {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+
+  overflow: hidden;
+
+  margin-bottom: 2rem;
+
+  background: rgb(255 255 255 / 0.05);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 18px;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.why-choose__item:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--color-accent);
+
+  box-shadow: 0 16px 40px rgb(0 0 0 / 0.25);
+}
+
+.why-choose__item--reverse {
+  grid-template-columns: 1fr 240px;
+}
+
+.why-choose__item--reverse .why-choose__graphic {
+  order: 2;
+}
+
+.why-choose__item--reverse .why-choose__content {
+  order: 1;
+}
+
+.why-choose__graphic {
+  min-height: 100%;
+
+  background-image: url("../../assets/images/accents/sidebar.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.why-choose__content {
+  padding: 2.5rem;
+}
+
+.why-choose__content h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.why-choose__content p {
+  color: rgb(255 255 255 / 0.85);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
