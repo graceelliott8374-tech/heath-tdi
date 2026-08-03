@@ -41,36 +41,35 @@ export const router = createBrowserRouter([
         path: "about",
         element: <About />,
       },
-      {
-        path: "services",
-        element: <Services />,
-        children: [
-          {
-            path: "managed-it",
-            element: <ManagedIT />,
-          },
-          {
-            path: "structured-cabling",
-            element: <StructuredCabling />,
-          },
-          {
-            path: "fiber-optics",
-            element: <FiberOptics />,
-          },
-          {
-            path: "voip",
-            element: <VoIP />,
-          },
-          {
-            path: "cybersecurity",
-            element: <Cybersecurity />,
-          },
-          {
-            path: "cloud-solutions",
-            element: <CloudSolutions />,
-          },
-        ],
-      },
+      
+    {
+  path: "services",
+  element: <Services />,
+},
+{
+  path: "services/managed-it",
+  element: <ManagedIT />,
+},
+{
+  path: "services/structured-cabling",
+  element: <StructuredCabling />,
+},
+{
+  path: "services/fiber-optics",
+  element: <FiberOptics />,
+},
+{
+  path: "services/voip",
+  element: <VoIP />,
+},
+{
+  path: "services/cybersecurity",
+  element: <Cybersecurity />,
+},
+{
+  path: "services/cloud-solutions",
+  element: <CloudSolutions />,
+},
       {
         path: "industries",
         element: <Industries />,
