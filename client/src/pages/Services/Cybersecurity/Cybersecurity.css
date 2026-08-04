@@ -1,3 +1,171 @@
 .cybersecurity {
+  width: 100%;
+}
+
+/* Hero */
+
+.cybersecurity__hero {
+  display: flex;
+  min-height: 65vh;
+
+  background-image:
+    linear-gradient(
+      rgb(5 18 40 / 0.45),
+      rgb(5 18 40 / 0.60)
+    ),
+    url("../../../assets/images/services/cybersecurity2.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cybersecurity__hero-overlay {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.cybersecurity__hero-content {
+  max-width: 48rem;
+  color: #ffffff;
+}
+
+.cybersecurity-hero__eyebrow {
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cybersecurity__hero h1 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-size: clamp(3.5rem, 6vw, 5.75rem);
+  line-height: 1.05;
+}
+
+.cybersecurity-hero__text {
+  max-width: 42rem;
+  color: rgb(255 255 255 / 0.92);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* Content Sections */
+
+.cybersecurity__section {
   padding: 6rem 0;
+}
+
+.cybersecurity__section--dark {
+  background-image:
+    linear-gradient(
+      rgb(6 21 46 / 0.54),
+      rgb(6 21 46 / 0.54)
+    ),
+    url("../../../assets/images/backgrounds/BlueBackground.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cybersecurity__section--gradient {
+  background: linear-gradient(
+    135deg,
+    #174968 0%,
+    #245f82 100%
+  );
+}
+
+.cybersecurity__section-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 4rem;
+}
+
+.cybersecurity__text h2 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.18;
+}
+
+.cybersecurity__text p {
+  margin-bottom: 1rem;
+  color: rgb(255 255 255 / 0.84);
+  line-height: 1.75;
+}
+
+.cybersecurity__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Images */
+
+.cybersecurity__image-wrapper {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.cybersecurity__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+
+  border: 2px solid rgb(255 255 255 / 0.08);
+  border-radius: var(--radius-md);
+
+  box-shadow:
+    0 25px 50px rgb(0 0 0 / 0.45),
+    0 0 35px rgb(32 201 176 / 0.2);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .cybersecurity__hero {
+    min-height: 55vh;
+    background-attachment: scroll;
+  }
+
+  .cybersecurity__section {
+    padding: 4.5rem 0;
+  }
+
+  .cybersecurity__section--dark {
+    background-attachment: scroll;
+  }
+
+  .cybersecurity__section-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .cybersecurity__section-content--reversed
+    .cybersecurity__image-wrapper {
+    order: 2;
+  }
+
+  .cybersecurity__section-content--reversed
+    .cybersecurity__text {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .cybersecurity__hero h1 {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .cybersecurity__section {
+    padding: 3.5rem 0;
+  }
 }

@@ -120,7 +120,7 @@ function Navbar() {
             </li>
 
             <li>
-              <NavLink to="/industries" onClick={closeMenus}>
+              <NavLink to="/whoweserve" onClick={closeMenus}>
                 Who We Serve
               </NavLink>
             </li>

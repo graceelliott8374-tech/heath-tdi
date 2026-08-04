@@ -14,7 +14,7 @@ import FiberOptics from "../pages/Services/FiberOptics/FiberOptics";
 import VoIP from "../pages/Services/VoIP/VoIP";
 import Cybersecurity from "../pages/Services/Cybersecurity/Cybersecurity";
 import CloudSolutions from "../pages/Services/CloudSolutions/CloudSolutions";
-import Industries from "../pages/Industries/Industries";
+import WhoWeServe from "../pages/WhoWeServe/WhoWeServe";
 import Contact from "../pages/Contact/Contact";
 import Support from "../pages/Support/Support";
 
@@ -71,8 +71,8 @@ export const router = createBrowserRouter([
   element: <CloudSolutions />,
 },
       {
-        path: "industries",
-        element: <Industries />,
+        path: "whoweserve",
+        element: <WhoWeServe />,
       },
       {
         path: "contact",
