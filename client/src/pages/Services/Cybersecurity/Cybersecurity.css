@@ -9,10 +9,7 @@
   min-height: 65vh;
 
   background-image:
-    linear-gradient(
-      rgb(5 18 40 / 0.45),
-      rgb(5 18 40 / 0.60)
-    ),
+    linear-gradient(rgb(5 18 40 / 0.55), rgb(5 18 40 / 0.68)),
     url("../../../assets/images/services/cybersecurity2.jpg");
 
   background-position: center;
@@ -63,10 +60,7 @@
 
 .cybersecurity__section--dark {
   background-image:
-    linear-gradient(
-      rgb(6 21 46 / 0.54),
-      rgb(6 21 46 / 0.54)
-    ),
+    linear-gradient(rgb(6 21 46 / 0.54), rgb(6 21 46 / 0.54)),
     url("../../../assets/images/backgrounds/BlueBackground.jpg");
 
   background-position: center;
@@ -76,11 +70,7 @@
 }
 
 .cybersecurity__section--gradient {
-  background: linear-gradient(
-    135deg,
-    #174968 0%,
-    #245f82 100%
-  );
+  background: linear-gradient(135deg, #174968 0%, #245f82 100%);
 }
 
 .cybersecurity__section-content {
@@ -149,13 +139,11 @@
     gap: 2.5rem;
   }
 
-  .cybersecurity__section-content--reversed
-    .cybersecurity__image-wrapper {
+  .cybersecurity__section-content--reversed .cybersecurity__image-wrapper {
     order: 2;
   }
 
-  .cybersecurity__section-content--reversed
-    .cybersecurity__text {
+  .cybersecurity__section-content--reversed .cybersecurity__text {
     order: 1;
   }
 }

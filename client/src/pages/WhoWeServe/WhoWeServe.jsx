@@ -1,4 +1,5 @@
 import "./WhoWeServe.css";
+import CallToAction from "../../components/CallToAction/CallToAction";
 import {
   Buildings,
   FirstAidKit,
@@ -6,6 +7,8 @@ import {
   Factory,
   Storefront,
   Church,
+  TreeStructure,
+  CheckCircle,
 } from "@phosphor-icons/react";
 
 function WhoWeServe() {
@@ -18,13 +21,13 @@ function WhoWeServe() {
             <div className="who-we-serve__hero-content">
               <p className="who-we-serve-hero__eyebrow">Who We Serve</p>
 
-              <h1>Technology Solutions for Every Business</h1>
+              <h1>Technology for Every Organization</h1>
 
               <p className="who-we-serve-hero__text">
-                Heath Telephone &amp; Data proudly supports organizations of all
-                sizes with dependable technology solutions. From small offices
-                to large facilities, we help businesses stay connected, secure,
-                and productive.
+                Heath Telephone &amp; Data supports organizations of all sizes
+                with dependable technology solutions. From small offices to
+                large facilities, we help businesses stay connected, secure, and
+                productive.
               </p>
             </div>
           </div>
@@ -34,7 +37,7 @@ function WhoWeServe() {
       {/* Introduction */}
       <section className="who-we-serve__section who-we-serve__section--dark">
         <div className="container who-we-serve__intro">
-          <h2>Serving Businesses Across Every Industry</h2>
+          <h2>Serving Businesses Across Industries</h2>
 
           <p>
             Every organization relies on technology to keep operations running
@@ -151,6 +154,164 @@ function WhoWeServe() {
           </div>
         </div>
       </section>
+
+      {/* How We Adapt */}
+
+      <section className="who-we-serve__section">
+        <div className="container">
+          <div className="who-we-serve__section-content">
+            <div className="who-we-serve__image-wrapper">
+              <TreeStructure
+                className="who-we-serve__feature-icon"
+                size={320}
+                weight="duotone"
+                aria-hidden="true"
+              />
+            </div>
+
+            <div className="who-we-serve__text">
+              <h2>Technology That Fits Your Business</h2>
+
+              <p>
+                Every organization has unique technology requirements. A medical
+                practice has different priorities than a manufacturing facility,
+                and a nonprofit has different needs than a retail business. We
+                design solutions around the way you work, delivering technology
+                that fits your organization instead of forcing a
+                one-size-fits-all approach.
+              </p>
+
+              <p>
+                Heath Telephone &amp; Data takes the time to understand your
+                workflow, budget, and long-term goals before recommending a
+                solution. We believe technology should support the way you work,
+                not force you to change how you do business.
+              </p>
+
+              <p>
+                Whether you're opening a new location, upgrading your
+                infrastructure, or planning for future growth, we design
+                dependable solutions that scale with your organization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Technology Solutions */}
+
+      <section className="who-we-serve__section who-we-serve__section--gradient">
+        <div className="container">
+          <div className="who-we-serve__services-card">
+            <div className="who-we-serve__services">
+              <h2>Complete Technology Solutions</h2>
+
+              <p className="who-we-serve__services-intro">
+                No matter your industry, Heath Telephone &amp; Data provides
+                dependable technology services that keep organizations
+                connected, secure, and productive.
+              </p>
+
+              <div className="who-we-serve__services-grid">
+                <ul>
+                  <li>
+                    <CheckCircle
+                      className="who-we-serve__check"
+                      size={22}
+                      weight="fill"
+                    />
+                    Managed IT
+                  </li>
+
+                  <li>
+                    <CheckCircle
+                      className="who-we-serve__check"
+                      size={22}
+                      weight="fill"
+                    />
+                    Network Solutions
+                  </li>
+
+                  <li>
+                    <CheckCircle
+                      className="who-we-serve__check"
+                      size={22}
+                      weight="fill"
+                    />
+                    WiFi &amp; Wireless
+                  </li>
+                </ul>
+
+                <ul>
+                  <li>
+                    <CheckCircle
+                      className="who-we-serve__check"
+                      size={22}
+                      weight="fill"
+                    />
+                    Structured Cabling
+                  </li>
+
+                  <li>
+                    <CheckCircle
+                      className="who-we-serve__check"
+                      size={22}
+                      weight="fill"
+                    />
+                    Fiber Optics
+                  </li>
+
+                  <li>
+                    <CheckCircle
+                      className="who-we-serve__check"
+                      size={22}
+                      weight="fill"
+                    />
+                    Communications
+                  </li>
+                </ul>
+
+                <ul>
+                  <li>
+                    <CheckCircle
+                      className="who-we-serve__check"
+                      size={22}
+                      weight="fill"
+                    />
+                    Security &amp; Surveillance
+                  </li>
+
+                  <li>
+                    <CheckCircle
+                      className="who-we-serve__check"
+                      size={22}
+                      weight="fill"
+                    />
+                    Cybersecurity
+                  </li>
+
+                  <li>
+                    <CheckCircle
+                      className="who-we-serve__check"
+                      size={22}
+                      weight="fill"
+                    />
+                    Cloud &amp; Hybrid Infrastructure
+                  </li>
+                </ul>
+              </div>
+
+              <p className="who-we-serve__services-footer">
+                From new construction and office relocations to infrastructure
+                upgrades and ongoing support, our team delivers technology
+                solutions designed to grow with your organization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CallToAction />
     </main>
   );
 }

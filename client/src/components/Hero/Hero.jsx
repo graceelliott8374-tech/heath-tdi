@@ -15,8 +15,8 @@ function Hero() {
           </h1>
 
           <p className="hero__text">
-            Managed IT, structured cabling, fiber optics, VoIP, cybersecurity,
-            and cloud solutions for businesses across the CSRA.
+            Managed IT, network infrastructure, communications, cybersecurity,
+            and technology solutions for businesses across the CSRA.
           </p>
 
           <div className="hero__buttons">

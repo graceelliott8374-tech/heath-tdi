@@ -8,11 +8,7 @@ function FiberOptics() {
           <div className="container fiber-optics__hero-content">
             <p className="fiber-optics-hero__eyebrow">Fiber Optic Solutions</p>
 
-            <h1>
-              Faster Connections.
-              <br />
-              Built For Tomorrow.
-            </h1>
+            <h1>Faster Connections. Built For Tomorrow.</h1>
 
             <p className="fiber-optics-hero__text">
               High-speed fiber optic installations designed to provide
@@ -31,8 +27,8 @@ function FiberOptics() {
             <h2>Precision Fiber Installation</h2>
 
             <p>
-              Fiber optic cabling provides the speed and reliability modern
-              businesses depend on for voice, data, cloud services, and
+              Fiber optic infrastructure supports the high-capacity connections
+              modern businesses depend on for voice, data, cloud services, and
               mission-critical applications.
             </p>
 
@@ -76,7 +72,8 @@ function FiberOptics() {
 
             <p>
               Whether supporting cloud platforms, VoIP, or large data transfers,
-              fiber provides the performance today's businesses demand.
+              fiber provides the capacity needed for demanding business
+              applications.
             </p>
           </div>
         </div>
@@ -96,8 +93,9 @@ function FiberOptics() {
             </p>
 
             <p>
-              Heath designs scalable fiber solutions that support today's needs
-              while preparing your organization for tomorrow's technology.
+              Heath designs scalable fiber solutions that make it easier to
+              expand capacity as your organization, locations, and technology
+              requirements grow..
             </p>
           </div>
 

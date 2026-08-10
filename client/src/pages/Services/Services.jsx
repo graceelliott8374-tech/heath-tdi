@@ -6,40 +6,61 @@ const services = [
   {
     title: "Managed IT",
     description:
-      "Proactive monitoring, maintenance, system management, and strategic IT support that keeps your business productive.",
+      "Proactive monitoring, maintenance, and IT support that keeps your systems reliable and your business productive.",
     image: "/src/assets/images/services/serverRack.jpg",
     path: "/services/managed-it",
   },
   {
+    title: "Network Solutions",
+    description:
+      "Reliable network design, installation, configuration, and support built around your business needs.",
+    image: "/src/assets/images/services/switch1.jpg",
+    path: "/services/network-solutions",
+  },
+  {
+    title: "WiFi & Wireless",
+    description:
+      "Reliable wireless network design, installation, coverage optimization, and support for dependable business connectivity.",
+    image: "/src/assets/images/services/wifi2.jpg",
+    path: "/services/wifi-wireless",
+  },
+  {
     title: "Structured Cabling",
     description:
-      "Professional voice and data cabling designed for reliable, organized, and scalable business infrastructure.",
+      "Professional voice and data cabling designed for reliable, organized, and scalable connectivity.",
     image: "/src/assets/images/services/cables_server.jpg",
     path: "/services/structured-cabling",
   },
   {
     title: "Fiber Optics",
     description:
-      "High-speed fiber installation, testing, repair, and certification for dependable network performance.",
+      "Fiber optic installation, testing, repair, and infrastructure solutions for reliable high-speed connectivity.",
     image: "/src/assets/images/services/fiberOptic2.jpg",
     path: "/services/fiber-optics",
   },
   {
-    title: "VoIP",
+    title: "Communications",
     description:
-      "Modern business phone systems with flexible features, clear communication, and dependable reliability.",
+      "Modern business phone systems with flexible features and dependable connectivity.",
     image: "/src/assets/images/services/VOIPphone.jpg",
     path: "/services/voip",
   },
   {
+    title: "Security & Surveillance",
+    description:
+      "Professional camera systems, recording solutions, remote viewing, and surveillance infrastructure for business environments.",
+    image: "/src/assets/images/other/camera3.jpg",
+    path: "/services/security-surveillance",
+  },
+  {
     title: "Cybersecurity",
     description:
-      "Practical security solutions designed to protect your systems, users, accounts, and business data.",
+      "Practical protection for your systems, networks, accounts, and business data.",
     image: "/src/assets/images/services/cybersecurity2.jpg",
     path: "/services/cybersecurity",
   },
   {
-    title: "Cloud Solutions",
+    title: "Cloud & Hybrid Infrastructure",
     description:
       "Secure cloud services that support collaboration, business continuity, storage, and remote productivity.",
     image: "/src/assets/images/services/cloud2.jpg",
@@ -55,13 +76,13 @@ function Services() {
           <div className="container services-hero__content">
             <p className="services-hero__eyebrow">Our Services</p>
 
-            <h1>Technology Solutions That Keep Your Business Moving.</h1>
+            <h1>Complete Technology Solutions.</h1>
 
             <p className="services-hero__text">
-              From managed IT and structured cabling to fiber optics, VoIP,
-              cybersecurity, and cloud solutions, Heath Telephone &amp; Data
-              delivers dependable technology services for businesses throughout
-              the CSRA.
+              From managed IT and networking to communications, cybersecurity,
+              cloud, and infrastructure, Heath Telephone &amp; Data provides the
+              technology businesses need to stay connected, secure, and
+              productive.
             </p>
           </div>
         </div>
@@ -70,15 +91,11 @@ function Services() {
       <section className="services-grid-section">
         <div className="container">
           <div className="services-grid-section__heading">
-            <p className="services-grid-section__eyebrow">
-              Complete Technology Support
-            </p>
-
-            <h2>Explore Our Services</h2>
+            <h2>Our Technology Services</h2>
 
             <p>
-              Select a service to learn how Heath Telephone &amp; Data can help
-              strengthen your business technology and communications.
+              Explore solutions designed to keep your business connected,
+              secure, and running reliably.s.
             </p>
           </div>
 
@@ -112,6 +129,70 @@ function Services() {
         </div>
       </section>
 
+      <section className="services-lifecycle">
+        <div className="container">
+          <div className="services-lifecycle__heading">
+            <p className="services-lifecycle__eyebrow">Technology Lifecycle</p>
+
+            <h2>Technology That Works From Planning to Support.</h2>
+
+            <p>
+              Reliable technology starts with the right design and continues
+              through installation, management, security, and ongoing support.
+              Heath Telephone &amp; Data provides solutions across the entire
+              technology lifecycle.
+            </p>
+          </div>
+
+          <div className="services-lifecycle__steps">
+            <div className="services-lifecycle__step">
+              <span className="services-lifecycle__number">01</span>
+              <h3>Plan</h3>
+              <p>
+                Assess your current environment, identify requirements, and
+                design technology around your business needs.
+              </p>
+            </div>
+
+            <div className="services-lifecycle__step">
+              <span className="services-lifecycle__number">02</span>
+              <h3>Build</h3>
+              <p>
+                Install the cabling, networking, communications, wireless,
+                security, and infrastructure your organization depends on.
+              </p>
+            </div>
+
+            <div className="services-lifecycle__step">
+              <span className="services-lifecycle__number">03</span>
+              <h3>Manage</h3>
+              <p>
+                Maintain systems, monitor performance, manage infrastructure,
+                and keep technology operating reliably.
+              </p>
+            </div>
+
+            <div className="services-lifecycle__step">
+              <span className="services-lifecycle__number">04</span>
+              <h3>Protect</h3>
+              <p>
+                Strengthen systems, networks, accounts, and data with practical
+                cybersecurity and continuity solutions.
+              </p>
+            </div>
+
+            <div className="services-lifecycle__step">
+              <span className="services-lifecycle__number">05</span>
+              <h3>Support</h3>
+              <p>
+                Provide ongoing technical assistance, troubleshooting, and
+                guidance as your technology and business needs change.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="services-cta">
         <div className="container services-cta__content">
           <h2>Not Sure Where to Start?</h2>
@@ -119,7 +200,8 @@ function Services() {
           <p>
             Every business has unique technology needs. Whether you're planning
             a new project, upgrading your infrastructure, or looking for ongoing
-            IT support, we're here to help you find the right solution.
+            IT support, Heath Telephone &amp; Data can help you find the right
+            solution.
           </p>
 
           <div className="services-cta__buttons">
@@ -136,8 +218,6 @@ function Services() {
           </div>
         </div>
       </section>
-
-      
     </main>
   );
 }

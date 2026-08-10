@@ -4,18 +4,19 @@ function WhyChoose() {
   return (
     <section className="why-choose">
       <div className="container">
-        <h2>Why Choose Heath?</h2>
+        <h2>Why Choose Heath TDI?</h2>
 
         <section className="why-choose__item">
           <div className="why-choose__graphic"></div>
 
           <div className="why-choose__content">
-            <h3>Local CSRA Expertise</h3>
+            <h3>Local Experience You Can Trust</h3>
 
             <p>
-              Heath Telephone &amp; Data has proudly served businesses
-              throughout the Central Savannah River Area with dependable
-              technology and communications solutions.
+              Heath Telephone & Data serves customers throughout the Central
+              Savannah River Area with dependable communications, technology,
+              and infrastructure backed by responsive service and long-term
+              relationships.
             </p>
           </div>
         </section>
@@ -27,9 +28,10 @@ function WhyChoose() {
             <h3>Complete Technology Solutions</h3>
 
             <p>
-              From managed IT and cybersecurity to structured cabling, fiber
-              optics, VoIP, and cloud services, Heath provides one reliable
-              source for your business technology needs.
+              From managed IT and network infrastructure to communications,
+              cybersecurity, cloud services, cabling, fiber optics, and
+              surveillance, Heath provides one reliable source for your
+              technology and infrastructure needs.
             </p>
           </div>
         </section>
@@ -41,10 +43,10 @@ function WhyChoose() {
             <h3>Experienced Infrastructure Specialists</h3>
 
             <p>
-              From structured cabling and fiber optic installation to business
-              communications and network infrastructure, Heath delivers
-              dependable solutions backed by years of hands-on industry
-              experience.
+              Our team brings extensive hands-on experience in telephone
+              systems, voice and data cabling, network infrastructure, fiber
+              optics, and surveillance installation, with careful attention to
+              safety, workmanship, and long-term reliability.
             </p>
           </div>
         </section>
@@ -53,12 +55,13 @@ function WhyChoose() {
           <div className="why-choose__graphic"></div>
 
           <div className="why-choose__content">
-            <h3>Responsive, Reliable Support</h3>
+            <h3>Service Is Our Most Important Product</h3>
 
             <p>
-              Technology issues can disrupt your business. Heath provides
-              responsive, dependable support with a proactive approach to keep
-              your systems running smoothly and your team productive.
+              Heath takes a client-centered approach to every project and
+              support request. We communicate clearly, respond promptly, and
+              work to deliver dependable solutions that keep your systems
+              connected, secure, and operating as intended.
             </p>
           </div>
         </section>

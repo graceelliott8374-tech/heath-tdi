@@ -6,18 +6,14 @@ function VoIP() {
       <section className="voip__hero">
         <div className="voip__hero-overlay">
           <div className="container voip__hero-content">
-            <p className="voip-hero__eyebrow">VoIP Phone Systems</p>
+            <p className="voip-hero__eyebrow">Communications</p>
 
-            <h1>
-              Modern Business
-              <br />
-              Communication.
-            </h1>
+            <h1>Reliable Communication. Wherever You Work.</h1>
 
             <p className="voip-hero__text">
-              Reliable VoIP phone solutions that keep your business connected
-              with crystal-clear calling, advanced features, and the flexibility
-              to communicate from anywhere.
+              Heath Telephone &amp; Data provides reliable business
+              communication solutions, from modern VoIP systems to traditional
+              voice infrastructure, paging, and communication system support.
             </p>
           </div>
         </div>
@@ -26,20 +22,20 @@ function VoIP() {
       <section className="voip__section voip__section--dark">
         <div className="container voip__section-content">
           <div className="voip__text">
-            <p className="voip__eyebrow">Business Phone Solutions</p>
+            <p className="voip__eyebrow">Business Communication Systems</p>
 
-            <h2>Professional Communication for Every Business</h2>
+            <h2>Voice and Paging Built for Business</h2>
 
             <p>
-              Modern VoIP systems provide far more than a traditional telephone.
-              Features like voicemail-to-email, call forwarding, auto
-              attendants, and mobile integration help your team stay connected
-              wherever work takes them.
+              Heath Telephone &amp; Data provides communication systems designed
+              around the needs of each organization, including VoIP, digital
+              telephone systems, and paging solutions.
             </p>
 
             <p>
-              Heath Telephone &amp; Data designs and installs dependable phone
-              systems tailored to your organization's communication needs.
+              From new installations and system upgrades to configuration and
+              ongoing support, we help businesses maintain clear, dependable
+              communication across their teams and locations.
             </p>
           </div>
 
@@ -64,19 +60,20 @@ function VoIP() {
           </div>
 
           <div className="voip__text">
-            <p className="voip__eyebrow">Advanced Features</p>
+            <p className="voip__eyebrow">VoIP &amp; Flexible Calling</p>
 
-            <h2>Flexible Calling Wherever You Work</h2>
+            <h2>Communication Wherever Business Takes You</h2>
 
             <p>
-              Whether your employees are in the office, working remotely, or
-              traveling, VoIP technology keeps everyone connected using the same
-              business phone system.
+              VoIP systems give employees the flexibility to stay connected
+              whether they're in the office, working remotely, or moving between
+              locations.
             </p>
 
             <p>
-              Advanced call management features improve customer service while
-              simplifying day-to-day communication throughout your organization.
+              Features such as call forwarding, voicemail, auto attendants, and
+              mobile integration help businesses manage calls efficiently while
+              maintaining a consistent experience for customers.
             </p>
           </div>
         </div>
@@ -85,19 +82,20 @@ function VoIP() {
       <section className="voip__section voip__section--dark">
         <div className="container voip__section-content">
           <div className="voip__text">
-            <p className="voip__eyebrow">Reliable Infrastructure</p>
+            <p className="voip__eyebrow">Installation &amp; Support</p>
 
-            <h2>Built on a Stable Network Foundation</h2>
+            <h2>Communication Systems Built to Last</h2>
 
             <p>
-              A dependable phone system starts with dependable infrastructure.
-              Heath ensures your VoIP deployment is properly configured to
-              deliver consistent performance and excellent call quality.
+              Reliable communication depends on properly designed and installed
+              infrastructure. Heath Telephone &amp; Data installs and configures
+              communication systems for dependable day-to-day performance.
             </p>
 
             <p>
-              From new installations to upgrades and ongoing support, we help
-              businesses maintain communication they can rely on every day.
+              Ongoing service includes upgrades, troubleshooting, maintenance,
+              and support to help keep voice and paging systems operating
+              reliably as your organization's needs change.
             </p>
           </div>
 

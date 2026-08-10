@@ -10,13 +10,7 @@ function StructuredCabling() {
               Structured Cabling
             </p>
 
-            <h1>
-              The Right
-              <br />
-              Foundation For
-              <br />
-              Your Network.
-            </h1>
+            <h1>The Right Foundation For Your Network.</h1>
 
             <p className="structured-cabling-hero__text">
               Professionally designed and installed structured cabling systems
@@ -37,10 +31,10 @@ function StructuredCabling() {
             <h2>Network Infrastructure Built to Last</h2>
 
             <p>
-              A dependable network starts with quality cabling. Heath Telephone
-              &amp; Data installs structured cabling systems that provide
-              organized, scalable infrastructure for voice, data, and network
-              communications.
+              Dependable technology infrastructure starts with quality cabling.
+              Heath Telephone &amp; Data installs structured cabling systems
+              that provide organized, scalable infrastructure for voice, data,
+              and network communications.
             </p>
 
             <p>
@@ -99,9 +93,10 @@ function StructuredCabling() {
             <h2>Scalable Cabling for Growing Businesses</h2>
 
             <p>
-              Your network should be able to grow with your business. Structured
-              cabling provides the flexibility to add new workstations, devices,
-              and technologies without rebuilding your infrastructure.
+              Your technology infrastructure should be able to grow with your
+              business. Structured cabling provides the flexibility to add new
+              workstations, devices, and technologies without rebuilding your
+              infrastructure.
             </p>
 
             <p>

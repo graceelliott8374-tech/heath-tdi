@@ -31,11 +31,13 @@
 }
 
 .about-hero__eyebrow {
-  margin-bottom: 1rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+
   color: var(--color-accent);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -211,6 +213,85 @@
     min-height: auto;
   }
 }
+/* ==========================
+   Trusted Section
+========================== */
+
+.about-trust {
+  padding: 6rem 0;
+
+  background:
+    linear-gradient(
+      rgb(6 21 46 / 0.84),
+      rgb(6 21 46 / 0.84)
+    ),
+    url("../../assets/images/backgrounds/background2.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about-trust__content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-trust__eyebrow {
+  margin-bottom: 1rem;
+
+  color: var(--color-accent);
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-trust h2 {
+  margin-bottom: 1.5rem;
+
+  color: #ffffff;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.about-trust p {
+  max-width: 48rem;
+  margin: 0 auto 1.5rem;
+
+  color: rgb(255 255 255 / 0.84);
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-trust p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .about-trust {
+    padding: 4.5rem 0;
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-trust {
+    padding: 3.5rem 0;
+  }
+
+  .about-trust h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+}
+
 
 .ringo {
   padding: 6rem 0;
@@ -230,14 +311,26 @@
 
 .ringo__content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  grid-template-columns: 280px minmax(0, 1fr);
+  align-items: start;
   gap: 4rem;
 }
 
+.ringo__image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .ringo__image {
-  width: 100%;
   display: block;
+
+  width: 100%;
+  max-width: 340px;
+  height: 430px;
+
+  object-fit: cover;
+  object-position: center top;
+
   border-radius: var(--radius-md);
 
   border: 2px solid rgb(255 255 255 / 0.08);
@@ -303,4 +396,28 @@
   color: rgb(255 255 255 / 0.82);
   font-size: 1.1rem;
   line-height: 1.8;
+}
+.about-closing__motto {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.about-closing__motto p {
+  margin-bottom: 0.5rem;
+
+  color: #ffffff;
+
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.about-closing__motto span {
+  display: block;
+
+  color: var(--color-accent);
+
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.03em;
 }

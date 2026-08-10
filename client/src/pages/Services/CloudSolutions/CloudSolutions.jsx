@@ -9,21 +9,21 @@ function CloudSolutions() {
   return (
     <main className="cloud-solutions">
       {/* Hero */}
-      <section
-        className="cloud-solutions__hero"
-       
-      >
+      <section className="cloud-solutions__hero">
         <div className="container cloud-solutions__hero-overlay">
           <div className="cloud-solutions__hero-content">
-            <p className="cloud-solutions-hero__eyebrow">Cloud Solutions</p>
+            <p className="cloud-solutions-hero__eyebrow">
+              Cloud &amp; Hybrid Infrastructure
+            </p>
 
-            <h1>Secure, Flexible Cloud Services</h1>
+            <h1>Infrastructure That Fits Your Business.</h1>
 
             <p className="cloud-solutions-hero__text">
-              Modern cloud technology gives your business the flexibility to
-              work from anywhere while keeping your data secure, accessible, and
-              protected. Heath Telephone & Data delivers reliable cloud
-              solutions that grow with your business.
+              Heath Telephone &amp; Data designs cloud, local, and hybrid
+              infrastructure solutions based on how your business actually
+              works. From secure cloud services to physical servers and local
+              storage, we help build reliable systems that fit your operational
+              needs.
             </p>
           </div>
         </div>
@@ -33,17 +33,19 @@ function CloudSolutions() {
       <section className="cloud-solutions__section cloud-solutions__section--dark">
         <div className="container cloud-solutions__section-content">
           <div className="cloud-solutions__text">
-            <h2>Cloud Infrastructure</h2>
+            <h2>Cloud, Local &amp; Hybrid Infrastructure</h2>
 
             <p>
-              Move critical business systems to secure cloud environments that
-              provide improved reliability, scalability, and performance.
+              Not every business belongs entirely in the cloud. Some
+              applications, workloads, and data are better suited to local
+              infrastructure, while others benefit from the flexibility and
+              scalability of cloud services.
             </p>
 
             <p>
-              Whether you're migrating existing workloads or building a new
-              environment, we help design solutions that fit your business and
-              your budget.
+              We help design the right combination of cloud services, physical
+              servers, local storage, and connected infrastructure based on your
+              operational requirements, security needs, and budget.
             </p>
           </div>
 
@@ -69,16 +71,18 @@ function CloudSolutions() {
           </div>
 
           <div className="cloud-solutions__text">
-            <h2>Connect From Anywhere</h2>
+            <h2>Secure Access Wherever You Work</h2>
 
             <p>
-              Enable employees to securely access business applications and data
-              whether they're in the office, working remotely, or traveling.
+              Give your team reliable access to the applications, files, and
+              systems they need whether they're working in the office, remotely,
+              or across multiple locations.
             </p>
 
             <p>
-              Reliable connectivity and secure cloud access help your team stay
-              productive wherever business takes them.
+              We help connect cloud and local resources so your employees can
+              work efficiently without sacrificing security, reliability, or
+              control.
             </p>
           </div>
         </div>
@@ -88,16 +92,18 @@ function CloudSolutions() {
       <section className="cloud-solutions__section cloud-solutions__section--dark">
         <div className="container cloud-solutions__section-content">
           <div className="cloud-solutions__text">
-            <h2>Cloud Applications & Collaboration</h2>
+            <h2>Business Applications &amp; Collaboration</h2>
 
             <p>
-              Improve communication and teamwork with cloud-based productivity
-              tools, file sharing, email, and collaboration platforms.
+              Keep your team connected with the productivity tools, email, file
+              sharing, and collaboration platforms your business relies on every
+              day.
             </p>
 
             <p>
-              We help businesses adopt cloud technologies that simplify daily
-              operations while supporting future growth.
+              We help integrate these services with your existing technology
+              environment so users can access the tools and information they
+              need securely and reliably.
             </p>
           </div>
 

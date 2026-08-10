@@ -44,7 +44,7 @@
 .fiber-optics__hero h1 {
   margin-bottom: 1.5rem;
   color: #ffffff;
-  font-size: clamp(3.5rem, 6vw, 5.75rem);
+  font-size: clamp(2.9rem, 5vw, 4.6rem);
   line-height: 1.05;
 }
 

@@ -2,7 +2,9 @@
   width: 100%;
 }
 
-/* Hero */
+/* ==========================
+   Hero
+========================== */
 
 .who-we-serve__hero {
   display: flex;
@@ -27,12 +29,12 @@
   width: 100%;
 }
 
-.who-we-serve__hero-content {
-  max-width: 48rem;
-}
-
 .who-we-serve__hero-overlay .container {
   width: 100%;
+}
+
+.who-we-serve__hero-content {
+  max-width: 48rem;
 }
 
 .who-we-serve-hero__eyebrow {
@@ -51,7 +53,7 @@
 
   color: #ffffff;
 
-  font-size: clamp(3.5rem, 6vw, 5.75rem);
+  font-size: clamp(2.8rem, 5vw, 4.75rem);
   line-height: 1.05;
 }
 
@@ -64,7 +66,9 @@
   line-height: 1.7;
 }
 
-/* Intro */
+/* ==========================
+   Shared Sections
+========================== */
 
 .who-we-serve__section {
   padding: 6rem 0;
@@ -82,9 +86,22 @@
   background-attachment: fixed;
 }
 
+.who-we-serve__section--gradient {
+  background: linear-gradient(
+    135deg,
+    #174968 0%,
+    #245f82 100%
+  );
+}
+
+/* ==========================
+   Introduction
+========================== */
+
 .who-we-serve__intro {
   max-width: 800px;
   margin: 0 auto;
+
   text-align: center;
 }
 
@@ -98,10 +115,13 @@
 
 .who-we-serve__intro p {
   color: rgb(255 255 255 / 0.84);
+
   line-height: 1.8;
 }
 
-/* Industry Cards */
+/* ==========================
+   Industry Cards
+========================== */
 
 .who-we-serve__industries {
   padding: 6rem 0;
@@ -162,11 +182,148 @@
   line-height: 1.7;
 }
 
-/* Responsive */
+/* ==========================
+   Feature Section
+========================== */
+
+.who-we-serve__section-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 4rem;
+}
+
+.who-we-serve__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.who-we-serve__feature-icon {
+  color: var(--color-accent);
+
+  opacity: 0.9;
+
+  filter: drop-shadow(
+    0 0 18px rgb(32 201 176 / 0.35)
+  );
+}
+
+.who-we-serve__text h2 {
+  margin-bottom: 1.5rem;
+
+  color: #ffffff;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.18;
+}
+
+.who-we-serve__text p {
+  margin-bottom: 1rem;
+
+  color: rgb(255 255 255 / 0.84);
+
+  line-height: 1.75;
+}
+
+.who-we-serve__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================
+   Complete Technology Solutions
+========================== */
+
+.who-we-serve__services {
+  max-width: 900px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.who-we-serve__services-card {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 4rem;
+
+  background: rgb(12 31 56 / 0.92);
+
+  border: 1px solid rgb(32 201 176 / 0.18);
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 45px rgb(0 0 0 / 0.35),
+    0 0 25px rgb(32 201 176 / 0.10);
+}
+
+.who-we-serve__services h2 {
+  margin-bottom: 1.5rem;
+
+  color: #ffffff;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.who-we-serve__services-intro,
+.who-we-serve__services-footer {
+  max-width: 46rem;
+  margin: 0 auto;
+
+  color: rgb(255 255 255 / 0.88);
+
+  line-height: 1.8;
+}
+
+.who-we-serve__services-intro {
+  margin-bottom: 3rem;
+}
+
+.who-we-serve__services-footer {
+  margin-top: 3rem;
+}
+
+.who-we-serve__services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+
+  text-align: left;
+}
+
+.who-we-serve__services-grid ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.who-we-serve__services-grid li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin-bottom: 1.25rem;
+
+  color: #ffffff;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.who-we-serve__check {
+  flex-shrink: 0;
+
+  color: var(--color-accent);
+}
+
+/* ==========================
+   Responsive
+========================== */
 
 @media (max-width: 900px) {
   .who-we-serve__hero {
     min-height: 55vh;
+
     background-attachment: scroll;
   }
 
@@ -177,6 +334,23 @@
   .who-we-serve__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .who-we-serve__section-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+    text-align: center;
+  }
+
+  .who-we-serve__feature-icon {
+    width: 160px;
+    height: 160px;
+  }
+
+  .who-we-serve__services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 650px) {
@@ -184,8 +358,18 @@
     grid-template-columns: 1fr;
   }
 
+  .who-we-serve__services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   .who-we-serve__section,
   .who-we-serve__industries {
     padding: 4rem 0;
   }
+
+  .who-we-serve__services-card {
+    padding: 2rem;
+  }
 }
+

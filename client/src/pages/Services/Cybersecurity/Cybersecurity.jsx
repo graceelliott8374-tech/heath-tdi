@@ -1,6 +1,6 @@
 import "./Cybersecurity.css";
 
-import cybersecurityHero from "../../../assets/images/services/cybersecurity2.jpg";
+
 import cybersecurityAnalyst from "../../../assets/images/services/cybersecurity3.jpg";
 import cybersecurityLock from "../../../assets/images/services/cybersecurity4.jpg";
 import secureChip from "../../../assets/images/services/secureChip.jpg";
@@ -15,7 +15,7 @@ function Cybersecurity() {
           <div className="cybersecurity__hero-content">
             <p className="cybersecurity-hero__eyebrow">Cybersecurity</p>
 
-            <h1>Protecting Your Business From Modern Threats.</h1>
+            <h1>Protect Your Business From Modern Threats.</h1>
 
             <p className="cybersecurity-hero__text">
               Cyberattacks are constantly evolving. Heath Telephone &amp; Data
@@ -73,7 +73,7 @@ function Cybersecurity() {
           <div className="cybersecurity__text">
             <p className="cybersecurity-hero__eyebrow">Data Protection</p>
 
-            <h2>Protect Your Most Valuable Asset</h2>
+            <h2>Protect Your Critical Business Data</h2>
 
             <p>
               Your data is one of your organization's most valuable resources.

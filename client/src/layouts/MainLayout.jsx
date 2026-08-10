@@ -10,6 +10,7 @@ function MainLayout() {
   return (
     <div className="layout">
       <ScrollToTop />
+
       <TopBar />
       <Navbar />
 

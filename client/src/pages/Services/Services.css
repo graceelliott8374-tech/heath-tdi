@@ -7,10 +7,7 @@
   min-height: 65vh;
 
   background-image:
-    linear-gradient(
-      rgb(5 18 40 / 0.65),
-      rgb(5 18 40 / 0.78)
-    ),
+    linear-gradient(rgb(5 18 40 / 0.65), rgb(5 18 40 / 0.78)),
     url("../../assets/images/services/data1.jpg");
 
   background-position: center;
@@ -33,9 +30,9 @@
 .services-hero__eyebrow {
   margin-bottom: 1rem;
   color: var(--color-accent);
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -59,10 +56,7 @@
   padding: 6rem 0;
 
   background-image:
-    linear-gradient(
-      rgb(5 18 40 / 0.9),
-      rgb(5 18 40 / 0.94)
-    ),
+    linear-gradient(rgb(5 18 40 / 0.9), rgb(5 18 40 / 0.94)),
     url("../../assets/images/backgrounds/BlueBackground.jpg");
 
   background-position: center;
@@ -231,11 +225,7 @@
 .services-cta {
   padding: 6rem 0;
 
-  background: linear-gradient(
-    180deg,
-    #0d2f4d 0%,
-    #063b63 100%
-  );
+  background: linear-gradient(180deg, #0d2f4d 0%, #063b63 100%);
 
   text-align: center;
 }
@@ -297,4 +287,160 @@
 
 .services-cta__button--secondary:hover {
   background: rgb(32 201 176 / 0.12);
+}
+
+/* ==========================
+   Technology Lifecycle
+========================== */
+
+.services-lifecycle {
+  padding: 6rem 0;
+  background: #08192d;
+}
+
+.services-lifecycle__heading {
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.services-lifecycle__eyebrow {
+  margin-bottom: 0.75rem;
+  color: #20c9b0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.services-lifecycle__heading h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.services-lifecycle__heading > p:last-child {
+  margin: 0;
+  color: #b7c5d8;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Lifecycle steps */
+
+.services-lifecycle__steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #0b1f36;
+}
+
+.services-lifecycle__step {
+  position: relative;
+  min-height: 280px;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.services-lifecycle__step:last-child {
+  border-right: 0;
+}
+
+.services-lifecycle__number {
+  display: block;
+  margin-bottom: 1.75rem;
+  color: #20c9b0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.services-lifecycle__step h3 {
+  margin: 0 0 0.85rem;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+}
+
+.services-lifecycle__step p {
+  margin: 0;
+  color: #aebdd0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Subtle accent */
+
+.services-lifecycle__step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #20c9b0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.services-lifecycle__step:hover::before {
+  opacity: 1;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 1000px) {
+  .services-lifecycle__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-lifecycle__step {
+    border-bottom: 1px solid rgb(255 255 255 / 0.08);
+  }
+
+  .services-lifecycle__step:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .services-lifecycle__step:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .services-lifecycle {
+    padding: 4.5rem 0;
+  }
+
+  .services-lifecycle__heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .services-lifecycle__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .services-lifecycle__step {
+    min-height: auto;
+    padding: 1.75rem;
+    border-right: 0;
+    border-bottom: 1px solid rgb(255 255 255 / 0.08);
+  }
+
+  .services-lifecycle__number {
+    margin-bottom: 1rem;
+  }
+
+  .services-lifecycle__step:last-child {
+    border-bottom: 0;
+  }
 }

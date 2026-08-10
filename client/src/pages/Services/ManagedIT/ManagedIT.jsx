@@ -76,7 +76,7 @@ function ManagedIT() {
             </p>
 
             <p>
-              By watching the health of your technology and addressing concerns
+              By monitoring the health of your technology and addressing concerns
               early, Heath helps improve reliability, reduce avoidable downtime,
               and keep your systems operating smoothly.
             </p>

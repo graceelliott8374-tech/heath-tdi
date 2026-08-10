@@ -6,12 +6,12 @@ function CallToAction() {
   return (
     <section className="call-to-action">
       <div className="container call-to-action__content">
-        <h2>Ready to Modernize Your Business Technology?</h2>
+        <h2>Ready to Strengthen Your Technology?</h2>
 
         <p>
-          Whether you need managed IT services, structured cabling, fiber
-          optics, VoIP, cybersecurity, or cloud solutions, Heath is ready to
-          help you build a reliable technology foundation.
+          Whether you're upgrading existing systems, planning new
+          infrastructure, or looking for dependable ongoing support, Heath can
+          help build the technology foundation your business needs.
         </p>
 
         <div className="call-to-action__buttons">

@@ -8,7 +8,7 @@
   z-index: 1000;
 
   background-image:
-    linear-gradient(rgb(5 18 40 / 0.88), rgb(5 18 40 / 0.88)),
+    linear-gradient(rgb(5 18 40 / 0.58), rgb(5 18 40 / 0.58)),
     url("../../assets/images/backgrounds/BlueBackground.jpg");
 
   background-size: cover;
