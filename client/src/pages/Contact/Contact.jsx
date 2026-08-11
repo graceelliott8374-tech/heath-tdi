@@ -1,6 +1,5 @@
 import "./Contact.css";
-import Button from "../../components/Button/Button";
-import RingoTruck from "../../assets/images/ringo/Ringo_Truck.jpg";
+import { Link } from "react-router-dom";
 
 function Contact() {
   return (
@@ -19,12 +18,31 @@ function Contact() {
 
               <p className="contact__hero-text">
                 Whether you&apos;re planning a new installation, upgrading your
-                technology, or need dependable IT support, our team is ready to
-                help. Reach out today and let&apos;s discuss the right solution
-                for your organization.
+                existing systems, or looking for a dependable technology
+                partner, our team is ready to help. Reach out today and
+                let&apos;s discuss the right solution for your organization.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Technical Support Callout */}
+
+      <section className="contact__support-callout">
+        <div className="container contact__support-callout-inner">
+          <div>
+            <p className="contact__support-eyebrow">Existing Clients</p>
+            <h2>Need Technical Support?</h2>
+            <p>
+              If you&apos;re experiencing a technical issue or need assistance
+              with an existing service, visit our Get Support page.
+            </p>
+          </div>
+
+          <Link to="/support" className="contact__support-link">
+            Get Support
+          </Link>
         </div>
       </section>
 
@@ -137,6 +155,15 @@ function Contact() {
                     <input
                       type="checkbox"
                       name="services"
+                      value="network-solutions"
+                    />
+                    <span>Network Solutions</span>
+                  </label>
+
+                  <label className="contact__checkbox">
+                    <input
+                      type="checkbox"
+                      name="services"
                       value="structured-cabling"
                     />
                     <span>Structured Cabling</span>
@@ -148,12 +175,25 @@ function Contact() {
                       name="services"
                       value="fiber-optics"
                     />
-                    <span>Fiber Optic Installation</span>
+                    <span>Fiber Optics</span>
                   </label>
 
                   <label className="contact__checkbox">
-                    <input type="checkbox" name="services" value="voip" />
-                    <span>VoIP Phone Systems</span>
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="communications"
+                    />
+                    <span>Communications</span>
+                  </label>
+
+                  <label className="contact__checkbox">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="wifi-wireless"
+                    />
+                    <span>WiFi &amp; Wireless</span>
                   </label>
 
                   <label className="contact__checkbox">
@@ -172,6 +212,15 @@ function Contact() {
                       value="cloud-solutions"
                     />
                     <span>Cloud Solutions</span>
+                  </label>
+
+                  <label className="contact__checkbox">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="security-surveillance"
+                    />
+                    <span>Security &amp; Surveillance</span>
                   </label>
 
                   <label className="contact__checkbox">
@@ -202,321 +251,6 @@ function Contact() {
           </div>
         </div>
       </section>
-
-      {/* Technical Support Request */}
-
-      <section className="contact__support">
-        <div className="container">
-          <div className="contact__portal-notice">
-            <div>
-              <p className="contact__portal-eyebrow">Existing Clients</p>
-
-              <h3>Already Have an Open Service Request?</h3>
-
-              <p>
-                Sign in to the Client Support Portal to view ticket updates, add
-                information, and communicate directly with our technicians.
-              </p>
-            </div>
-
-            <Button to="/client-portal" className="button button--secondary">
-              Client Support Portal
-            </Button>
-          </div>
-
-          <div className="contact__support-card">
-            <div className="contact__support-header">
-              <p className="contact__eyebrow">Technical Support</p>
-
-              <h2>Need Help?</h2>
-
-              <p>
-                If you&apos;re experiencing a technical issue or need assistance
-                with your technology, submit a support request below. Our team
-                will review your request and respond as quickly as possible.
-              </p>
-            </div>
-
-            <form className="contact-support-form">
-              <div className="contact-support-form__grid">
-                <div className="contact-support-form__group">
-                  <label htmlFor="support-name">Full Name *</label>
-                  <input
-                    id="support-name"
-                    name="name"
-                    type="text"
-                    placeholder="John Smith"
-                    autoComplete="name"
-                    required
-                  />
-                </div>
-
-                <div className="contact-support-form__group">
-                  <label htmlFor="support-company">Company</label>
-                  <input
-                    id="support-company"
-                    name="company"
-                    type="text"
-                    placeholder="ABC Company"
-                    autoComplete="organization"
-                  />
-                </div>
-
-                <div className="contact-support-form__group">
-                  <label htmlFor="support-email">Email *</label>
-                  <input
-                    id="support-email"
-                    name="email"
-                    type="email"
-                    placeholder="name@company.com"
-                    autoComplete="email"
-                    required
-                  />
-                </div>
-
-                <div className="contact-support-form__group">
-                  <label htmlFor="support-phone">Phone *</label>
-                  <input
-                    id="support-phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="(706) 555-1234"
-                    autoComplete="tel"
-                    required
-                  />
-                </div>
-              </div>
-
-              <fieldset className="contact-support-form__fieldset">
-                <legend>Issue Type *</legend>
-
-                <div className="contact-support-form__options">
-                  <label>
-                    <input
-                      type="radio"
-                      name="issueType"
-                      value="new-issue"
-                      required
-                    />
-                    <span>New Issue</span>
-                  </label>
-
-                  <label>
-                    <input
-                      type="radio"
-                      name="issueType"
-                      value="existing-issue"
-                    />
-                    <span>Existing Issue</span>
-                  </label>
-
-                  <label>
-                    <input
-                      type="radio"
-                      name="issueType"
-                      value="service-request"
-                    />
-                    <span>Service Request</span>
-                  </label>
-
-                  <label>
-                    <input
-                      type="radio"
-                      name="issueType"
-                      value="project-request"
-                    />
-                    <span>Project Request</span>
-                  </label>
-                </div>
-              </fieldset>
-
-              <fieldset className="contact-support-form__fieldset">
-                <legend>Priority *</legend>
-
-                <div className="contact-support-form__options">
-                  <label>
-                    <input type="radio" name="priority" value="low" required />
-                    <span>Low</span>
-                  </label>
-
-                  <label>
-                    <input type="radio" name="priority" value="normal" />
-                    <span>Normal</span>
-                  </label>
-
-                  <label>
-                    <input type="radio" name="priority" value="high" />
-                    <span>High</span>
-                  </label>
-
-                  <label>
-                    <input type="radio" name="priority" value="critical" />
-                    <span>Critical</span>
-                  </label>
-
-                  <label>
-                    <input type="radio" name="priority" value="emergency" />
-                    <span>Emergency</span>
-                  </label>
-                </div>
-              </fieldset>
-
-              <fieldset className="contact-support-form__fieldset">
-                <legend>Services Needed</legend>
-
-                <div className="contact-support-form__options">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="supportServices"
-                      value="managed-it"
-                    />
-                    <span>Managed IT</span>
-                  </label>
-
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="supportServices"
-                      value="structured-cabling"
-                    />
-                    <span>Structured Cabling</span>
-                  </label>
-
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="supportServices"
-                      value="fiber-optics"
-                    />
-                    <span>Fiber Optics</span>
-                  </label>
-
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="supportServices"
-                      value="voip"
-                    />
-                    <span>VoIP</span>
-                  </label>
-
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="supportServices"
-                      value="cybersecurity"
-                    />
-                    <span>Cybersecurity</span>
-                  </label>
-
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="supportServices"
-                      value="cloud-solutions"
-                    />
-                    <span>Cloud Solutions</span>
-                  </label>
-
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="supportServices"
-                      value="other"
-                    />
-                    <span>Other</span>
-                  </label>
-                </div>
-              </fieldset>
-
-              <div className="contact-support-form__group">
-                <label htmlFor="support-subject">Subject *</label>
-
-                <input
-                  id="support-subject"
-                  name="subject"
-                  type="text"
-                  placeholder="Brief description of the issue"
-                  required
-                />
-              </div>
-
-              <div className="contact-support-form__group">
-                <label htmlFor="support-description">Description *</label>
-
-                <textarea
-                  id="support-description"
-                  name="description"
-                  rows="8"
-                  placeholder="Please describe the issue, including any error messages, affected users, equipment involved, and when the issue began."
-                  required
-                />
-              </div>
-
-              <Button type="submit" className="button button--primary">
-                Submit Support Request
-              </Button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Ringo */}
-
-      <section className="contact__ringo">
-        <div className="container">
-          <div className="contact__ringo-card">
-            <div className="contact__ringo-image">
-              <img
-                src={RingoTruck}
-                alt="Ringo looking out of a Heath Telephone and Data company truck window"
-              />
-            </div>
-
-            <div className="contact__ringo-content">
-              <p className="contact__eyebrow">
-                Head of Client Relations (Canine Division)
-              </p>
-
-              <h2>Want Ringo to Join the Visit?</h2>
-
-              <p>
-                Ringo is available for <strong>on-site consultations</strong>{" "}
-                and <strong>scheduled support visits</strong> whenever his
-                schedule allows. If you&apos;d enjoy having him accompany one of
-                our technicians, simply let us know.
-              </p>
-
-              <p>
-                He specializes in greeting clients, boosting morale, and
-                reminding everyone that technology problems are easier to solve
-                with a friendly face nearby.
-              </p>
-
-              <div className="contact__ringo-option">
-                <label className="contact__checkbox">
-                  <input type="checkbox" name="requestRingo" />
-
-                  <span>
-                    I&apos;d love Ringo to join our scheduled on-site
-                    consultation or support visit if he&apos;s available.
-                  </span>
-                </label>
-              </div>
-
-              <p className="contact__ringo-note">
-                *Ringo&apos;s appearances depend on his availability and the
-                nature of the service appointment.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What Happens Next */}
-
-      {/* Frequently Asked Questions */}
     </main>
   );
 }

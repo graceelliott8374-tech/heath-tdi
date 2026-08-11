@@ -1,5 +1,3 @@
-
-
 /* Main Navigation */
 
 .navbar {
@@ -172,7 +170,9 @@
   display: none;
 }
 
-/* Tablet and Mobile */
+/* ==========================
+   Tablet and Mobile Navigation
+========================== */
 
 @media (max-width: 900px) {
   .top-bar__content {
@@ -187,19 +187,190 @@
   }
 
   .navbar__content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+
     min-height: 4.75rem;
+    padding-block: 0.75rem;
   }
 
+  .logo {
+    margin-right: auto;
+  }
+
+  /* Hamburger */
+
+  .mobile-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+
+    color: #ffffff;
+    background: rgb(255 255 255 / 0.06);
+
+    border: 1px solid rgb(255 255 255 / 0.14);
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+
+    transition:
+      color var(--transition),
+      background-color var(--transition),
+      border-color var(--transition);
+  }
+
+  .mobile-menu-button:hover {
+    color: var(--color-accent);
+    background: rgb(255 255 255 / 0.1);
+    border-color: rgb(255 255 255 / 0.24);
+  }
+
+  .mobile-menu-button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  /* Closed Mobile Menu */
+
   .nav-links {
-    gap: 1.25rem;
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    width: 100%;
+    margin: 0;
+    padding: 0.75rem 0 0;
+  }
+
+  /* Open Mobile Menu */
+
+  .nav-links--open {
+    display: flex;
+  }
+
+  .nav-links > li {
+    width: 100%;
+  }
+
+  .nav-links > li > a,
+  .nav-dropdown__trigger {
+    border-top: 1px solid rgb(255 255 255 / 0.1);
   }
 
   .nav-links a {
-    font-size: 0.82rem;
+    display: flex;
+    width: 100%;
+    padding: 0.9rem 0.25rem;
+
+    font-size: 0.95rem;
+  }
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+  /* Mobile Services Accordion */
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown__trigger {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-dropdown__trigger > a {
+    flex: 1;
+    border: none;
+  }
+
+  .nav-dropdown__button {
+    flex-shrink: 0;
+
+    width: 3rem;
+    margin: 0;
+    padding: 0;
+
+    border-left: 1px solid rgb(255 255 255 / 0.1);
+  }
+
+  .services-dropdown {
+    position: static;
+
+    display: none;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0.35rem 0 0.5rem 1rem;
+
+    background: rgb(2 13 29 / 0.55);
+
+    border: none;
+    border-left: 2px solid var(--color-accent);
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+  .nav-dropdown--open .services-dropdown {
+    display: block;
+  }
+
+  .services-dropdown li {
+    width: 100%;
+  }
+
+  .services-dropdown a {
+    padding: 0.7rem 1rem;
+
+    color: rgb(255 255 255 / 0.82);
+
+    border: none;
+
+    font-size: 0.88rem;
+  }
+
+  .services-dropdown a:hover {
+    color: var(--color-accent);
+    background: rgb(255 255 255 / 0.06);
+  }
+
+  /* Support Button */
+
+  .nav-links__support {
+    justify-content: center;
+
+    margin-top: 0.75rem;
+    padding: 0.85rem 1.25rem !important;
+
+    background: var(--color-accent);
+    color: #06152e !important;
+
+    border: none !important;
+    border-radius: 0.5rem;
+  }
+
+  .nav-links__support:hover {
+    color: #06152e !important;
   }
 }
 
-@media (max-width: 700px) {
+/* ==========================
+   Small Mobile Screens
+========================== */
+
+@media (max-width: 600px) {
   .top-bar__content {
     align-items: flex-start;
     flex-direction: column;
@@ -213,41 +384,15 @@
     gap: 0.4rem;
   }
 
-  .navbar__content {
-    align-items: flex-start;
-    flex-direction: column;
-    padding-block: 1rem;
+  .logo__title {
+    font-size: 1.65rem;
   }
 
-  .nav-links {
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-    gap: 0;
+  .logo__subtitle {
+    font-size: 0.62rem;
   }
 
-  .nav-links li {
-    width: 100%;
+  .services-dropdown {
+    padding-left: 0.65rem;
   }
-
-  .nav-links a {
-    width: 100%;
-    padding: 0.8rem 0;
-    border-top: 1px solid var(--color-border);
-  }
-
-  .nav-links a.active::after {
-    display: none;
-  }
-
-  .mobile-menu-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-}
 }
