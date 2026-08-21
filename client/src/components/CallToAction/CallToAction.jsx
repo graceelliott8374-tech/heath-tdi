@@ -19,7 +19,7 @@ function CallToAction() {
             to="/contact"
             className="call-to-action__button call-to-action__button--primary"
           >
-            Request a Consultation
+            Contact Us
           </NavLink>
 
           <NavLink

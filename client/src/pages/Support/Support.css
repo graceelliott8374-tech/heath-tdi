@@ -63,92 +63,6 @@
 }
 
 /* ==========================
-   Client Portal Callout
-========================== */
-
-.support__portal {
-  padding: 2.25rem 0;
-
-  background: #0b2038;
-  border-top: 1px solid rgb(255 255 255 / 0.08);
-  border-bottom: 1px solid rgb(255 255 255 / 0.08);
-}
-
-.support__portal-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.support__portal-content {
-  max-width: 760px;
-}
-
-.support__portal-eyebrow {
-  margin: 0 0 0.5rem;
-
-  color: var(--color-accent);
-
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.support__portal h2 {
-  margin: 0 0 0.6rem;
-
-  color: #ffffff;
-
-  font-size: clamp(1.5rem, 3vw, 2rem);
-}
-
-.support__portal-content > p:last-child {
-  margin: 0;
-
-  color: rgb(255 255 255 / 0.76);
-
-  line-height: 1.7;
-}
-
-.support__portal .button--secondary {
-  flex-shrink: 0;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 210px;
-  padding: 0.9rem 1.5rem;
-
-  color: #071525;
-  background: var(--color-accent);
-
-  border: 2px solid var(--color-accent);
-  border-radius: 0.55rem;
-
-  font-weight: 700;
-  text-decoration: none;
-
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.support__portal .button--secondary:hover {
-  color: #ffffff;
-  background: transparent;
-  transform: translateY(-2px);
-}
-
-.support__portal .button--secondary:focus-visible {
-  outline: 3px solid #ffffff;
-  outline-offset: 4px;
-}
-
-/* ==========================
    Support Request Section
 ========================== */
 
@@ -507,12 +421,19 @@
     transform 0.25s ease;
 }
 
-.support-form .button--primary:hover {
+.support-form .button--primary:not(:disabled):hover {
   color: #ffffff;
   background: transparent;
 
   box-shadow: 0 18px 40px rgb(32 201 176 / 0.32);
   transform: translateY(-2px);
+}
+
+.support-form .button--primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  box-shadow: none;
+  transform: none;
 }
 
 .support-form .button--primary:focus-visible {
@@ -888,11 +809,6 @@
   .support__request {
     background-attachment: scroll;
   }
-
-  .support__portal-inner {
-    align-items: flex-start;
-    flex-direction: column;
-  }
 }
 
 @media (max-width: 700px) {
@@ -909,10 +825,6 @@
   .support-form__services {
     grid-template-columns: 1fr;
   }
-
-  .support__portal .button--secondary {
-    width: 100%;
-  }
 }
 
 @media (max-width: 600px) {
@@ -927,10 +839,6 @@
 
   .support__hero-text {
     font-size: 1rem;
-  }
-
-  .support__portal {
-    padding: 2rem 0;
   }
 
   .support__request {

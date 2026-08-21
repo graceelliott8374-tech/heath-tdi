@@ -1,7 +1,86 @@
-import "./Contact.css";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+
+import { submitContactForm } from "../../api/forms";
+import "./Contact.css";
 
 function Contact() {
+  const [formStartedAt, setFormStartedAt] = useState(() => Date.now());
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (isSubmitting) {
+      return;
+    }
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const website = String(formData.get("website") ?? "").trim();
+    const startedAt = Number(formData.get("formStartedAt"));
+
+    const completedTooQuickly =
+      !Number.isFinite(startedAt) ||
+      startedAt <= 0 ||
+      Date.now() - startedAt < 3000;
+
+    if (website) {
+      return;
+    }
+
+    if (completedTooQuickly) {
+      toast.error("Please wait a moment and try again.");
+      return;
+    }
+
+    const submission = {
+      name: String(formData.get("name") ?? "").trim(),
+      company: String(formData.get("company") ?? "").trim(),
+      email: String(formData.get("email") ?? "").trim(),
+      phone: String(formData.get("phone") ?? "").trim(),
+      services: formData.getAll("services").map(String),
+      message: String(formData.get("message") ?? "").trim(),
+      website,
+      formStartedAt: startedAt,
+    };
+
+    setIsSubmitting(true);
+
+    const toastId = toast.loading("Sending your message...");
+
+    try {
+      const data = await submitContactForm(submission);
+
+      toast.update(toastId, {
+        render: data.message || "Your message has been submitted successfully.",
+        type: "success",
+        isLoading: false,
+        autoClose: 4000,
+        closeOnClick: true,
+      });
+
+      form.reset();
+      setFormStartedAt(Date.now());
+    } catch (error) {
+      const message =
+        error.response?.data?.message ||
+        "We could not send your message. Please try again.";
+
+      toast.update(toastId, {
+        render: message,
+        type: "error",
+        isLoading: false,
+        autoClose: 5000,
+        closeOnClick: true,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="contact">
       {/* Hero */}
@@ -97,7 +176,7 @@ function Contact() {
               </p>
             </div>
 
-            <form className="contact__form">
+            <form className="contact__form" onSubmit={handleSubmit}>
               <div className="contact__form-grid">
                 <div className="contact__field">
                   <label htmlFor="contact-name">Name *</label>
@@ -141,6 +220,27 @@ function Contact() {
                   />
                 </div>
               </div>
+
+              {/* Honeypot */}
+
+              <div className="contact__website" aria-hidden="true">
+                <label htmlFor="contact-website">Leave this field empty</label>
+
+                <input
+                  id="contact-website"
+                  name="website"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
+              <input
+                name="formStartedAt"
+                type="hidden"
+                value={formStartedAt}
+                readOnly
+              />
 
               <fieldset className="contact__services">
                 <legend>Services You&apos;re Interested In</legend>
@@ -244,8 +344,12 @@ function Contact() {
                 />
               </div>
 
-              <button type="submit" className="contact__submit">
-                Send Message
+              <button
+                type="submit"
+                className="contact__submit"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>

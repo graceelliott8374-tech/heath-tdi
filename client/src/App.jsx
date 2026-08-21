@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { HelmetProvider } from "react-helmet-async";
 import { RouterProvider } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -20,6 +21,7 @@ function App() {
         draggable
         theme="dark"
       />
+      <Analytics />
     </HelmetProvider>
   );
 }

@@ -14,7 +14,7 @@ function NetworkSolutions() {
 
               <h1>
                 Reliable Networks Built
-                <br />
+              
                 for Business.
               </h1>
 

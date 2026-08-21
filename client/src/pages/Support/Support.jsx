@@ -1,8 +1,93 @@
-import "./Support.css";
+import { useState } from "react";
+import { toast } from "react-toastify";
+
 import Button from "../../components/Button/Button";
+import { submitSupportForm } from "../../api/forms";
 import RingoTruck from "../../assets/images/ringo/Ringo_Truck.jpg";
+import "./Support.css";
 
 function Support() {
+  const [formStartedAt, setFormStartedAt] = useState(() => Date.now());
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (isSubmitting) {
+      return;
+    }
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const website = String(formData.get("website") ?? "").trim();
+    const startedAt = Number(formData.get("formStartedAt"));
+
+    const completedTooQuickly =
+      !Number.isFinite(startedAt) ||
+      startedAt <= 0 ||
+      Date.now() - startedAt < 3000;
+
+    if (website) {
+      return;
+    }
+
+    if (completedTooQuickly) {
+      toast.error("Please wait a moment and try again.");
+      return;
+    }
+
+    const submission = {
+      name: String(formData.get("name") ?? "").trim(),
+      company: String(formData.get("company") ?? "").trim(),
+      email: String(formData.get("email") ?? "").trim(),
+      phone: String(formData.get("phone") ?? "").trim(),
+      issueType: String(formData.get("issueType") ?? ""),
+      priority: String(formData.get("priority") ?? ""),
+      services: formData.getAll("services").map(String),
+      subject: String(formData.get("subject") ?? "").trim(),
+      description: String(formData.get("description") ?? "").trim(),
+      requestRingo: formData.get("requestRingo") === "yes",
+      website,
+      formStartedAt: startedAt,
+    };
+
+    setIsSubmitting(true);
+
+    const toastId = toast.loading("Submitting your support request...");
+
+    try {
+      const data = await submitSupportForm(submission);
+
+      toast.update(toastId, {
+        render:
+          data.message ||
+          "Your support request has been submitted successfully.",
+        type: "success",
+        isLoading: false,
+        autoClose: 4000,
+        closeOnClick: true,
+      });
+
+      form.reset();
+      setFormStartedAt(Date.now());
+    } catch (error) {
+      const message =
+        error.response?.data?.message ||
+        "We could not submit your support request. Please try again.";
+
+      toast.update(toastId, {
+        render: message,
+        type: "error",
+        isLoading: false,
+        autoClose: 5000,
+        closeOnClick: true,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="support">
       {/* Hero */}
@@ -22,32 +107,6 @@ function Support() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Client Portal */}
-
-      <section
-        className="support__portal"
-        aria-labelledby="support-portal-title"
-      >
-        <div className="container support__portal-inner">
-          <div className="support__portal-content">
-            <p className="support__portal-eyebrow">Existing Clients</p>
-
-            <h2 id="support-portal-title">
-              Already Have an Open Service Request?
-            </h2>
-
-            <p>
-              Sign in to the Client Support Portal to view ticket updates, add
-              information, and communicate directly with our technicians.
-            </p>
-          </div>
-
-          <Button to="/client-portal" className="button button--secondary">
-            Client Support Portal
-          </Button>
         </div>
       </section>
 
@@ -98,7 +157,7 @@ function Support() {
             {/* Support Form */}
 
             <div className="support__request-card">
-              <form className="support-form">
+              <form className="support-form" onSubmit={handleSubmit}>
                 <div className="support-form__grid">
                   <div className="support-form__group">
                     <label htmlFor="support-name">Full Name *</label>
@@ -155,10 +214,17 @@ function Support() {
                     id="support-website"
                     name="website"
                     type="text"
-                    tabIndex="-1"
+                    tabIndex={-1}
                     autoComplete="off"
                   />
                 </div>
+
+                <input
+                  name="formStartedAt"
+                  type="hidden"
+                  value={formStartedAt}
+                  readOnly
+                />
 
                 <div className="support-form__options-grid">
                   <fieldset className="support-form__fieldset">
@@ -372,8 +438,12 @@ function Support() {
                   </p>
                 </fieldset>
 
-                <Button type="submit" className="button button--primary">
-                  Submit Support Request
+                <Button
+                  type="submit"
+                  className="button button--primary"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Submitting..." : "Submit Support Request"}
                 </Button>
               </form>
             </div>
@@ -447,9 +517,8 @@ function Support() {
               <h3>We Work Toward Resolution</h3>
 
               <p>
-                We diagnose and address the issue while keeping you informed.
-                Existing clients can also follow updates through the Client
-                Support Portal.
+                We diagnose and address the issue while keeping you informed
+                throughout the support process.
               </p>
             </li>
           </ol>
@@ -466,8 +535,8 @@ function Support() {
             <h2 id="support-faq-title">Support Request Questions</h2>
 
             <p>
-              Find answers about submitting requests, receiving assistance, and
-              tracking an existing issue.
+              Find answers about submitting requests and receiving technical
+              assistance.
             </p>
           </div>
 
@@ -526,13 +595,13 @@ function Support() {
             </details>
 
             <details className="support__faq-item">
-              <summary>Can I check the status of my request?</summary>
+              <summary>How will I receive updates about my request?</summary>
 
               <div className="support__faq-answer">
                 <p>
-                  Existing clients can sign in to the Client Support Portal to
-                  review ticket updates, provide additional information, and
-                  communicate with the technician handling the request.
+                  A technician will contact you using the email address or phone
+                  number provided with your request. Keep an eye on your email
+                  and voicemail in case additional information is needed.
                 </p>
               </div>
             </details>
@@ -556,10 +625,10 @@ function Support() {
 
               <div className="support__faq-answer">
                 <p>
-                  If the new information relates to the same issue, add it to
-                  the existing ticket through the Client Support Portal. This
-                  keeps all relevant details together and helps prevent
-                  duplicate requests.
+                  If the new information relates to the same issue, reply to the
+                  most recent message from our team or contact us directly. This
+                  keeps the details together and helps prevent duplicate
+                  requests.
                 </p>
               </div>
             </details>

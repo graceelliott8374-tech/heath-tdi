@@ -57,6 +57,17 @@
   line-height: 1.7;
 }
 
+/* Honeypot */
+
+.contact__website {
+  position: absolute;
+  left: -10000px;
+
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -416,9 +427,15 @@
     opacity var(--transition);
 }
 
-.contact__submit:hover {
+.contact__submit:not(:disabled):hover {
   transform: translateY(-2px);
   opacity: 0.92;
+}
+
+.contact__submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
 }
 
 .contact__submit:focus-visible {

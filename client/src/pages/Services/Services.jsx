@@ -206,7 +206,7 @@ function Services() {
 
           <div className="services-cta__buttons">
             <NavLink to="/contact" className="services-cta__button">
-              Request a Consultation
+              Contact Us
             </NavLink>
 
             <NavLink
