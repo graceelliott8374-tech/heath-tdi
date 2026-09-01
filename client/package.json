@@ -1,7 +1,8 @@
 {
-  "name": "client",
+  "name": "heath-tdi-client",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Frontend website for Heath Telephone and Data.",
   "type": "module",
   "scripts": {
     "dev": "vite",

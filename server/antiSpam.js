@@ -1,10 +1,28 @@
-import { rateLimit } from "express-rate-limit";
+import { ipKeyGenerator, rateLimit } from "express-rate-limit";
 
 const MINIMUM_COMPLETION_TIME_MS = 3000;
+
+/*
+ * Return the visitor's IP address.
+ *
+ * On Vercel, the public visitor address is supplied through
+ * x-vercel-forwarded-for. During local development and testing,
+ * Express's req.ip value is used instead.
+ */
+function getClientIp(req) {
+  const vercelForwardedFor = req.headers["x-vercel-forwarded-for"];
+
+  const forwardedIp = Array.isArray(vercelForwardedFor)
+    ? vercelForwardedFor[0]
+    : vercelForwardedFor?.split(",")[0].trim();
+
+  return ipKeyGenerator(forwardedIp || req.ip);
+}
 
 export const formRateLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   limit: 10,
+  keyGenerator: getClientIp,
   standardHeaders: "draft-8",
   legacyHeaders: false,
   message: {

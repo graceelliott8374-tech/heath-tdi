@@ -1,6 +1,6 @@
 import "./CloudSolutions.css";
 
-import cloudHero from "../../../assets/images/services/Cloud.jpg";
+
 import cloudInfrastructure from "../../../assets/images/services/cloud4.jpg";
 import cloudConnectivity from "../../../assets/images/services/cloud2.jpg";
 import cloudApplications from "../../../assets/images/services/cloud3.jpg";

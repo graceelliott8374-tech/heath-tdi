@@ -1,0 +1,23 @@
+# Dependencies
+client/node_modules/
+server/node_modules/
+
+# Frontend build output
+client/dist/
+client/dist-ssr/
+
+# Environment files and secrets
+client/.env
+client/.env.*
+!client/.env.example
+
+server/.env
+server/.env.*
+!server/.env.example
+
+# Vercel local project settings
+client/.vercel/
+server/.vercel/
+
+# Logs
+*.log

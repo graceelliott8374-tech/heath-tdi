@@ -2,7 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 
 // Layouts
 import MainLayout from "../layouts/MainLayout";
-import AdminLayout from "../layouts/AdminLayout";
+
+// Future admin dashboard layout:
+// import AdminLayout from "../layouts/AdminLayout";
 
 // Public Pages
 import Home from "../pages/Home/Home";

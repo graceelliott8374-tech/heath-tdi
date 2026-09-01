@@ -1,15 +1,14 @@
 {
-  "name": "server",
+  "name": "heath-tdi-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Backend API for the Heath Telephone and Data website.",
+  "main": "app.js",
   "scripts": {
     "test": "node --test forms.test.js",
     "start": "node app.js",
     "dev": "node --watch app.js"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {

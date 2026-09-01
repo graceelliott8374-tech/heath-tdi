@@ -8,15 +8,40 @@ import contactRouter from "./contact.js";
 import supportRouter from "./support.js";
 
 const app = express();
-
 const PORT = Number(process.env.PORT) || 3000;
-const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || "http://localhost:5173";
+
+/*
+ * CLIENT_ORIGIN may contain one address or multiple comma-separated addresses.
+ *
+ * LOCAL DEVELOPMENT:
+ * CLIENT_ORIGIN=http://localhost:5173
+ *
+ * FRIDAY DEPLOYMENT — set this in the backend Vercel project:
+ * CLIENT_ORIGIN=https://heathtdi.com,https://www.heathtdi.com
+ *
+ * Do not include trailing slashes.
+ */
+const allowedOrigins = (process.env.CLIENT_ORIGIN || "http://localhost:5173")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 
 app.use(helmet());
 
 app.use(
   cors({
-    origin: CLIENT_ORIGIN,
+    origin(origin, callback) {
+      /*
+       * Requests made directly by tools such as Postman or curl may not
+       * include an Origin header. Browser requests must match the allowlist.
+       */
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+
+      callback(new Error("This origin is not allowed by CORS."));
+    },
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
@@ -32,7 +57,6 @@ app.get("/api/health", (req, res) => {
 });
 
 app.use("/api/contact", contactRouter);
-
 app.use("/api/support", supportRouter);
 
 app.use("/api", (req, res) => {
@@ -41,7 +65,11 @@ app.use("/api", (req, res) => {
   });
 });
 
-if (process.env.NODE_ENV !== "test") {
+/*
+ * Start a traditional server when running locally.
+ * Vercel imports the exported Express app and manages the server itself.
+ */
+if (process.env.NODE_ENV !== "test" && !process.env.VERCEL) {
   app.listen(PORT, () => {
     console.log(`Heath TDI backend running on port ${PORT}`);
   });
