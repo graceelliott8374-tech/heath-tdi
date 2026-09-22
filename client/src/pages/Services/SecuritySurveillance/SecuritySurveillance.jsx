@@ -2,6 +2,7 @@ import "./SecuritySurveillance.css";
 
 import CameraTwo from "../../../assets/images/other/camera2.jpg";
 import CameraFive from "../../../assets/images/other/camera5.jpg";
+import CameraThree from "../../../assets/images/other/camera3.jpg";
 
 function SecuritySurveillance() {
   return (
@@ -36,7 +37,7 @@ function SecuritySurveillance() {
             <p>
               A dependable surveillance system provides more than recorded
               video. It provides greater visibility and access to the
-              information you need when something unexpected happens
+              information you need when something unexpected happens.
             </p>
 
             <p>
@@ -113,7 +114,7 @@ function SecuritySurveillance() {
 
           <div className="security-surveillance__image-wrapper">
             <img
-              src="/src/assets/images/other/camera3.jpg"
+              src={CameraThree}
               alt="Security camera installed in a commercial environment"
               className="security-surveillance__image"
             />

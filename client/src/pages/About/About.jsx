@@ -1,4 +1,6 @@
 import "./About.css";
+import technician from "../../assets/images/other/technician.jpg";
+import ringoSweater from "../../assets/images/ringo/Ringo_Sweater.png";
 
 import {
   ClipboardText,
@@ -51,7 +53,7 @@ function About() {
 
           <div className="about-story__image-wrapper">
             <img
-              src="/src/assets/images/other/technician.jpg"
+              src={technician}
               alt="Technician working on networking equipment"
               className="about-story__image"
             />
@@ -156,7 +158,7 @@ function About() {
         <div className="container ringo__content">
           <div className="ringo__image-wrapper">
             <img
-              src="/src/assets/images/ringo/Ringo_Sweater.png"
+              src={ringoSweater}
               alt="Ringo, Heath Telephone & Data's Chief Morale Officer"
               className="ringo__image"
             />

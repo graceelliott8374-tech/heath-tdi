@@ -1,5 +1,9 @@
 import "./FiberOptics.css";
 
+import fiberTechnician from "../../../assets/images/services/fiberTechnician.jpg";
+import fiberOptic1 from "../../../assets/images/services/fiberOptic1.jpg";
+import fiberopticServer from "../../../assets/images/services/fiberopticServer.jpg";
+
 function FiberOptics() {
   return (
     <article className="fiber-optics">
@@ -41,7 +45,7 @@ function FiberOptics() {
 
           <div className="fiber-optics__image-wrapper">
             <img
-              src="/src/assets/images/services/fiberTechnician.jpg"
+              src={fiberTechnician}
               alt="Technician installing fiber optic equipment"
               className="fiber-optics__image"
             />
@@ -53,7 +57,7 @@ function FiberOptics() {
         <div className="container fiber-optics__section-content fiber-optics__section-content--reversed">
           <div className="fiber-optics__image-wrapper">
             <img
-              src="/src/assets/images/services/fiberOptic1.jpg"
+              src={fiberOptic1}
               alt="Fiber optic strands transmitting light"
               className="fiber-optics__image"
             />
@@ -95,13 +99,13 @@ function FiberOptics() {
             <p>
               Heath designs scalable fiber solutions that make it easier to
               expand capacity as your organization, locations, and technology
-              requirements grow..
+              requirements grow.
             </p>
           </div>
 
           <div className="fiber-optics__image-wrapper">
             <img
-              src="/src/assets/images/services/fiberopticServer.jpg"
+              src={fiberopticServer}
               alt="Fiber optic network equipment"
               className="fiber-optics__image"
             />

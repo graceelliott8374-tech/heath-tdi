@@ -1,5 +1,8 @@
 import "./NetworkSolutions.css";
 
+import routerSwitch from "../../../assets/images/services/routerSwitch.jpg";
+import switch1 from "../../../assets/images/services/switch1.jpg";
+import technician3 from "../../../assets/images/services/technician3.jpg";
 
 function NetworkSolutions() {
   return (
@@ -12,11 +15,7 @@ function NetworkSolutions() {
                 Network Solutions
               </p>
 
-              <h1>
-                Reliable Networks Built
-              
-                for Business.
-              </h1>
+              <h1>Reliable Networks Built for Business.</h1>
 
               <p className="network-solutions-hero__text">
                 Heath Telephone &amp; Data designs, installs, and supports
@@ -46,13 +45,13 @@ function NetworkSolutions() {
             <p>
               From new installations to upgrades and expansions, we build
               dependable network infrastructure designed to support day-to-day
-              operations and future growth
+              operations and future growth.
             </p>
           </div>
 
           <div className="network-solutions__image-wrapper">
             <img
-              src="/src/assets/images/services/routerSwitch.jpg"
+              src={routerSwitch}
               alt="Business network router and switch equipment"
               className="network-solutions__image"
             />
@@ -64,7 +63,7 @@ function NetworkSolutions() {
         <div className="container network-solutions__section-content network-solutions__section-content--reversed">
           <div className="network-solutions__image-wrapper">
             <img
-              src="/src/assets/images/services/switch1.jpg"
+              src={switch1}
               alt="Network switch with connected Ethernet cables"
               className="network-solutions__image"
             />
@@ -117,7 +116,7 @@ function NetworkSolutions() {
 
           <div className="network-solutions__image-wrapper">
             <img
-              src="/src/assets/images/services/technician3.jpg"
+              src={technician3}
               alt="Technician servicing network infrastructure"
               className="network-solutions__image"
             />

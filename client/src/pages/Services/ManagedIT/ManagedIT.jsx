@@ -1,5 +1,9 @@
 import "./ManagedIT.css";
 
+import serverRack from "../../../assets/images/services/serverRack.jpg";
+import rack2 from "../../../assets/images/services/rack2.jpg";
+import code1 from "../../../assets/images/services/code1.jpg";
+
 function ManagedIT() {
   return (
     <article className="managed-it">
@@ -46,7 +50,7 @@ function ManagedIT() {
 
           <div className="managed-it__image-wrapper">
             <img
-              src="/src/assets/images/services/serverRack.jpg"
+              src={serverRack}
               alt="Server racks supporting managed IT infrastructure"
               className="managed-it__image"
             />
@@ -58,7 +62,7 @@ function ManagedIT() {
         <div className="container managed-it__section-content managed-it__section-content--reversed">
           <div className="managed-it__image-wrapper">
             <img
-              src="/src/assets/images/services/rack2.jpg"
+              src={rack2}
               alt="Network servers monitored for performance and reliability"
               className="managed-it__image"
             />
@@ -76,9 +80,9 @@ function ManagedIT() {
             </p>
 
             <p>
-              By monitoring the health of your technology and addressing concerns
-              early, Heath helps improve reliability, reduce avoidable downtime,
-              and keep your systems operating smoothly.
+              By monitoring the health of your technology and addressing
+              concerns early, Heath helps improve reliability, reduce avoidable
+              downtime, and keep your systems operating smoothly.
             </p>
           </div>
         </div>
@@ -106,7 +110,7 @@ function ManagedIT() {
 
           <div className="managed-it__image-wrapper">
             <img
-              src="/src/assets/images/services/code1.jpg"
+              src={code1}
               alt="Software and systems monitored through managed IT support"
               className="managed-it__image"
             />

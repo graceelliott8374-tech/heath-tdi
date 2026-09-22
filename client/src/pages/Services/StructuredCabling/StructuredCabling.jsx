@@ -1,5 +1,9 @@
 import "./StructuredCabling.css";
 
+import technician2 from "../../../assets/images/services/technician2.jpg";
+import cable2 from "../../../assets/images/services/cable2.jpg";
+import cable1 from "../../../assets/images/services/cable1.jpg";
+
 function StructuredCabling() {
   return (
     <article className="structured-cabling">
@@ -46,7 +50,7 @@ function StructuredCabling() {
 
           <div className="structured-cabling__image-wrapper">
             <img
-              src="/src/assets/images/services/technician2.jpg"
+              src={technician2}
               alt="Technician installing structured network cabling"
               className="structured-cabling__image"
             />
@@ -58,7 +62,7 @@ function StructuredCabling() {
         <div className="container structured-cabling__section-content structured-cabling__section-content--reversed">
           <div className="structured-cabling__image-wrapper">
             <img
-              src="/src/assets/images/services/cable2.jpg"
+              src={cable2}
               alt="Structured cabling installed in a network rack"
               className="structured-cabling__image"
             />
@@ -108,7 +112,7 @@ function StructuredCabling() {
 
           <div className="structured-cabling__image-wrapper">
             <img
-              src="/src/assets/images/services/cable1.jpg"
+              src={cable1}
               alt="Network cable prepared for installation"
               className="structured-cabling__image"
             />

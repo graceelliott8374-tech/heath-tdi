@@ -1,5 +1,9 @@
 import "./VoIP.css";
 
+import voipPhone4 from "../../../assets/images/services/VOIPphone4.jpg";
+import voipPhone2 from "../../../assets/images/services/VOIPphone2.jpg";
+import voipPhone3 from "../../../assets/images/services/VOIPphone3.jpg";
+
 function VoIP() {
   return (
     <article className="voip">
@@ -41,7 +45,7 @@ function VoIP() {
 
           <div className="voip__image-wrapper">
             <img
-              src="/src/assets/images/services/VOIPphone4.jpg"
+              src={voipPhone4}
               alt="Business professional using a VoIP desk phone"
               className="voip__image"
             />
@@ -53,7 +57,7 @@ function VoIP() {
         <div className="container voip__section-content voip__section-content--reversed">
           <div className="voip__image-wrapper">
             <img
-              src="/src/assets/images/services/VOIPphone2.jpg"
+              src={voipPhone2}
               alt="Employee dialing a modern VoIP business telephone"
               className="voip__image"
             />
@@ -101,7 +105,7 @@ function VoIP() {
 
           <div className="voip__image-wrapper">
             <img
-              src="/src/assets/images/services/VOIPphone3.jpg"
+              src={voipPhone3}
               alt="Network equipment supporting VoIP communications"
               className="voip__image"
             />

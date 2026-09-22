@@ -1,5 +1,9 @@
 import "./WiFiWireless.css";
 
+import wifi1 from "../../../assets/images/services/wifi1.jpg";
+import wifi2 from "../../../assets/images/services/wifi2.jpg";
+import guestWifi from "../../../assets/images/services/guestWifi.jpg";
+
 function WiFiWireless() {
   return (
     <article className="wifi-wireless">
@@ -46,7 +50,7 @@ function WiFiWireless() {
 
           <div className="wifi-wireless__image-wrapper">
             <img
-              src="/src/assets/images/services/wifi1.jpg"
+              src={wifi1}
               alt="Business wireless networking equipment"
               className="wifi-wireless__image"
             />
@@ -58,7 +62,7 @@ function WiFiWireless() {
         <div className="container wifi-wireless__section-content wifi-wireless__section-content--reversed">
           <div className="wifi-wireless__image-wrapper">
             <img
-              src="/src/assets/images/services/wifi2.jpg"
+              src={wifi2}
               alt="Wireless access point supporting business Wi-Fi coverage"
               className="wifi-wireless__image"
             />
@@ -107,7 +111,7 @@ function WiFiWireless() {
 
           <div className="wifi-wireless__image-wrapper">
             <img
-              src="/src/assets/images/services/guestWifi.jpg"
+              src={guestWifi}
               alt="Network hardware supporting secure business wireless connectivity"
               className="wifi-wireless__image"
             />

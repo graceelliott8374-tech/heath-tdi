@@ -1,69 +1,78 @@
 import { NavLink } from "react-router-dom";
 
 import "./Services.css";
+import serverRack from "../../assets/images/services/serverRack.jpg";
+import switch1 from "../../assets/images/services/switch1.jpg";
+import wifi2 from "../../assets/images/services/wifi2.jpg";
+import cablesServer from "../../assets/images/services/cables_server.jpg";
+import fiberOptic2 from "../../assets/images/services/fiberOptic2.jpg";
+import voipPhone from "../../assets/images/services/VOIPphone.jpg";
+import camera3 from "../../assets/images/other/camera3.jpg";
+import cybersecurity2 from "../../assets/images/services/cybersecurity2.jpg";
+import cloud2 from "../../assets/images/services/cloud2.jpg";
 
 const services = [
   {
     title: "Managed IT",
     description:
       "Proactive monitoring, maintenance, and IT support that keeps your systems reliable and your business productive.",
-    image: "/src/assets/images/services/serverRack.jpg",
+    image: serverRack,
     path: "/services/managed-it",
   },
   {
     title: "Network Solutions",
     description:
       "Reliable network design, installation, configuration, and support built around your business needs.",
-    image: "/src/assets/images/services/switch1.jpg",
+    image: switch1,
     path: "/services/network-solutions",
   },
   {
     title: "WiFi & Wireless",
     description:
       "Reliable wireless network design, installation, coverage optimization, and support for dependable business connectivity.",
-    image: "/src/assets/images/services/wifi2.jpg",
+    image: wifi2,
     path: "/services/wifi-wireless",
   },
   {
     title: "Structured Cabling",
     description:
       "Professional voice and data cabling designed for reliable, organized, and scalable connectivity.",
-    image: "/src/assets/images/services/cables_server.jpg",
+    image: cablesServer,
     path: "/services/structured-cabling",
   },
   {
     title: "Fiber Optics",
     description:
       "Fiber optic installation, testing, repair, and infrastructure solutions for reliable high-speed connectivity.",
-    image: "/src/assets/images/services/fiberOptic2.jpg",
+    image: fiberOptic2,
     path: "/services/fiber-optics",
   },
   {
     title: "Communications",
     description:
       "Modern business phone systems with flexible features and dependable connectivity.",
-    image: "/src/assets/images/services/VOIPphone.jpg",
+    image: voipPhone,
     path: "/services/voip",
   },
   {
     title: "Security & Surveillance",
     description:
       "Professional camera systems, recording solutions, remote viewing, and surveillance infrastructure for business environments.",
-    image: "/src/assets/images/other/camera3.jpg",
+    image: camera3,
     path: "/services/security-surveillance",
   },
   {
     title: "Cybersecurity",
     description:
       "Practical protection for your systems, networks, accounts, and business data.",
-    image: "/src/assets/images/services/cybersecurity2.jpg",
+    image: cybersecurity2,
     path: "/services/cybersecurity",
   },
   {
     title: "Cloud & Hybrid Infrastructure",
     description:
       "Secure cloud services that support collaboration, business continuity, storage, and remote productivity.",
-    image: "/src/assets/images/services/cloud2.jpg",
+    image: cloud2,
     path: "/services/cloud-solutions",
   },
 ];
@@ -95,7 +104,7 @@ function Services() {
 
             <p>
               Explore solutions designed to keep your business connected,
-              secure, and running reliably.s.
+              secure, and running reliably.
             </p>
           </div>
 
