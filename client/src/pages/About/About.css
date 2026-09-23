@@ -7,10 +7,7 @@
   min-height: 65vh;
 
   background-image:
-    linear-gradient(
-      rgb(5 18 40 / 0.62),
-      rgb(5 18 40 / 0.78)
-    ),
+    linear-gradient(rgb(5 18 40 / 0.62), rgb(5 18 40 / 0.78)),
     url("../../assets/images/hero/background.jpg");
 
   background-position: center;
@@ -58,12 +55,9 @@
 .about-story {
   padding: 6rem 0;
 
- background-image:
- linear-gradient(
-  rgb(6 21 46 / 0.45),
-  rgb(6 21 46 / 0.45)
-),
-  url("../../assets/images/backgrounds/BlueBackground.jpg");
+  background-image:
+    linear-gradient(rgb(6 21 46 / 0.45), rgb(6 21 46 / 0.45)),
+    url("../../assets/images/backgrounds/BlueBackground.jpg");
 
   background-position: center;
   background-repeat: no-repeat;
@@ -108,18 +102,13 @@
 
   box-shadow:
     0 25px 50px rgb(0 0 0 / 0.55),
-    0 0 35px rgb(45 212 191 / 0.30);
+    0 0 35px rgb(45 212 191 / 0.3);
 }
 
 .how-we-work {
   padding: 6rem 0;
 
-  background: linear-gradient(
-    180deg,
-    #143f63 0%,
-    #1b5375 50%,
-    #245f82 100%
-  );
+  background: linear-gradient(180deg, #143f63 0%, #1b5375 50%, #245f82 100%);
 
   text-align: center;
 }
@@ -221,10 +210,7 @@
   padding: 6rem 0;
 
   background:
-    linear-gradient(
-      rgb(6 21 46 / 0.84),
-      rgb(6 21 46 / 0.84)
-    ),
+    linear-gradient(rgb(6 21 46 / 0.84), rgb(6 21 46 / 0.84)),
     url("../../assets/images/backgrounds/background2.jpg");
 
   background-position: center;
@@ -292,15 +278,11 @@
   }
 }
 
-
 .ringo {
   padding: 6rem 0;
 
   background-image:
-    linear-gradient(
-      rgb(6 21 46 / 0.45),
-      rgb(6 21 46 / 0.45)
-    ),
+    linear-gradient(rgb(6 21 46 / 0.45), rgb(6 21 46 / 0.45)),
     url("../../assets/images/backgrounds/BlueBackground.jpg");
 
   background-position: center;
@@ -337,7 +319,7 @@
 
   box-shadow:
     0 25px 50px rgb(0 0 0 / 0.55),
-    0 0 35px rgb(45 212 191 / 0.30);
+    0 0 35px rgb(45 212 191 / 0.3);
 }
 
 .ringo__text h2 {
@@ -372,11 +354,7 @@
 .about-closing {
   padding: 5rem 0;
 
-  background: linear-gradient(
-    180deg,
-    #143f63 0%,
-    #0d2f4d 100%
-  );
+  background: linear-gradient(180deg, #143f63 0%, #0d2f4d 100%);
 
   text-align: center;
 }
@@ -420,4 +398,193 @@
   font-size: 1rem;
   font-style: italic;
   letter-spacing: 0.03em;
+}
+
+/* ==========================
+   About Page - Tablet
+========================== */
+
+@media (max-width: 900px) {
+  .about-hero,
+  .about-story,
+  .about-trust,
+  .ringo {
+    background-attachment: scroll;
+  }
+
+  .about-story__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-story__image {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .ringo__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .ringo__image-wrapper {
+    order: -1;
+  }
+}
+
+/* ==========================
+   About Page - Mobile
+========================== */
+
+@media (max-width: 768px) {
+  /* Hero */
+
+  .about-hero {
+    min-height: auto;
+  }
+
+  .about-hero__overlay {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .about-hero__content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-hero__eyebrow {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+    line-height: 1.05;
+  }
+
+  .about-hero__text {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Our Story */
+
+  .about-story {
+    padding: 4rem 0;
+  }
+
+  .about-story__content {
+    gap: 2rem;
+  }
+
+  .about-story h2 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .about-story p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* How We Work */
+
+  .how-we-work {
+    padding: 4rem 0;
+  }
+
+  .how-we-work__intro {
+    margin-bottom: 2.5rem;
+  }
+
+  .how-we-work__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .work-card {
+    min-height: auto;
+    padding: 1.75rem;
+  }
+
+  /* Trusted */
+
+  .about-trust {
+    padding: 4rem 0;
+  }
+
+  .about-trust p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Ringo */
+
+  .ringo {
+    padding: 4rem 0;
+  }
+
+  .ringo__content {
+    gap: 2rem;
+  }
+
+  .ringo__image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 280 / 430;
+  }
+
+  .ringo__text h3 {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Closing */
+
+  .about-closing {
+    padding: 4rem 0;
+  }
+
+  .about-closing p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .about-closing__motto {
+    margin-top: 2rem;
+  }
+}
+
+/* ==========================
+   About Page - Small Phones
+========================== */
+
+@media (max-width: 480px) {
+  .about-hero__overlay {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2.25rem, 10.5vw, 3rem);
+  }
+
+  .about-story,
+  .how-we-work,
+  .about-trust,
+  .ringo,
+  .about-closing {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .work-card {
+    padding: 1.5rem;
+  }
+
+  .ringo__image {
+    max-width: 280px;
+  }
 }

@@ -2,10 +2,7 @@
   padding: 6rem 0;
 
   background-image:
-    linear-gradient(
-      rgb(5 18 40 / 0.92),
-      rgb(5 18 40 / 0.92)
-    ),
+    linear-gradient(rgb(5 18 40 / 0.92), rgb(5 18 40 / 0.92)),
     url("../../assets/images/hero/background.jpg");
 
   background-size: cover;
@@ -15,11 +12,11 @@
 }
 
 .why-choose h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
 }
 
 .why-choose__item {
@@ -85,4 +82,89 @@
   color: rgb(255 255 255 / 0.85);
   font-size: 1.1rem;
   line-height: 1.8;
+}
+
+/* ==========================
+   Why Choose - Tablet
+========================== */
+
+@media (max-width: 1024px) {
+  .why-choose__item {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .why-choose__item--reverse {
+    grid-template-columns: 1fr 200px;
+  }
+
+  .why-choose__content {
+    padding: 2rem;
+  }
+}
+
+/* ==========================
+   Why Choose - Mobile
+========================== */
+
+@media (max-width: 768px) {
+  .why-choose {
+    padding: 4rem 0;
+    background-attachment: scroll;
+  }
+
+  .why-choose h2 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    margin-bottom: 2rem;
+  }
+
+  .why-choose__item,
+  .why-choose__item--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .why-choose__graphic,
+  .why-choose__item--reverse .why-choose__graphic {
+    order: 1;
+    min-height: 180px;
+  }
+
+  .why-choose__content,
+  .why-choose__item--reverse .why-choose__content {
+    order: 2;
+  }
+
+  .why-choose__content {
+    padding: 1.75rem;
+  }
+
+  .why-choose__content h3 {
+    font-size: 1.6rem;
+  }
+
+  .why-choose__content p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* ==========================
+   Why Choose - Small Phones
+========================== */
+
+@media (max-width: 480px) {
+  .why-choose {
+    padding: 3.5rem 0;
+  }
+
+  .why-choose__graphic {
+    min-height: 160px;
+  }
+
+  .why-choose__content {
+    padding: 1.5rem;
+  }
+
+  .why-choose__content h3 {
+    font-size: 1.5rem;
+  }
 }
