@@ -2,16 +2,13 @@
   min-height: 80vh;
 
   background-image:
-    linear-gradient(
-      rgb(5 18 40 / 0.65),
-      rgb(5 18 40 / 0.75)
-    ),
+    linear-gradient(rgb(5 18 40 / 0.65), rgb(5 18 40 / 0.75)),
     url("../../assets/images/hero/background.jpg");
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-background-attachment: fixed;
+  background-attachment: fixed;
   display: flex;
 }
 
@@ -44,7 +41,7 @@ background-attachment: fixed;
 .hero__text {
   max-width: 38rem;
   margin-top: 2rem;
-    margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
   font-size: 1.15rem;
   line-height: 1.7;
   color: rgb(235 240 245);
@@ -91,4 +88,73 @@ background-attachment: fixed;
 
 .hero__button--secondary:hover {
   background-color: rgb(255 255 255 / 0.1);
+}
+
+/* ==========================
+   Hero - Mobile
+========================== */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    background-attachment: scroll;
+    background-position: center;
+  }
+
+  .hero__overlay {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero__content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero__eyebrow {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    letter-spacing: 0.12rem;
+  }
+
+  .hero h1 {
+    margin: 1rem 0;
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+    line-height: 1.05;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .hero__text {
+    max-width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__button {
+    width: 100%;
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* ==========================
+   Hero - Small Phones
+========================== */
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: clamp(2.25rem, 10.5vw, 3rem);
+  }
+
+  .hero__overlay {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
 }
