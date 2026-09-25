@@ -1,5 +1,5 @@
 import "./ManagedIT.css";
-
+import FreeAssessment from "../../../components/FreeAssessment/FreeAssessment";
 import serverRack from "../../../assets/images/services/serverRack.jpg";
 import rack2 from "../../../assets/images/services/rack2.jpg";
 import code1 from "../../../assets/images/services/code1.jpg";
@@ -117,6 +117,7 @@ function ManagedIT() {
           </div>
         </div>
       </section>
+      <FreeAssessment />
     </article>
   );
 }

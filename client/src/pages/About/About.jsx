@@ -17,7 +17,7 @@ function About() {
           <div className="container about-hero__content">
             <p className="about-hero__eyebrow">About Heath TDI</p>
 
-            <h1>Keeping The CSRA Connected.</h1>
+            <h1>Keeping Businesses Connected.</h1>
 
             <p className="about-hero__text">
               Since 2000, Heath Telephone &amp; Data has provided dependable
@@ -188,12 +188,14 @@ function About() {
 
       <section className="about-closing">
         <div className="container about-closing__content">
-          <h2>Proudly Serving the CSRA.</h2>
+          <h2>Proudly Serving the CSRA and Surrounding Communities.</h2>
 
           <p>
-            Heath Telephone & Data serves businesses throughout Georgia and
-            South Carolina with dependable communications, networking, managed
-            IT services, and technology solutions. Every project is built on
+            Heath Telephone &amp; Data serves businesses throughout the CSRA and
+            surrounding communities, including Augusta, Evans, Martinez,
+            Thomson, Gibson, Mitchell, and neighboring areas across Georgia and
+            South Carolina. We provide dependable communications, networking,
+            managed IT services, and technology solutions built on
             professionalism, responsiveness, and a commitment to delivering on
             our promises.
           </p>

@@ -76,6 +76,17 @@ const validSupportRequest = {
   formStartedAt: Date.now() - 5000,
 };
 
+const validAssessmentRequest = {
+  name: "Test User",
+  company: "Heath Telephone & Data",
+  email: "test@example.com",
+  phone: "706-555-0100",
+  concerns: "We would like our network performance and security reviewed.",
+  preferredContact: "email",
+  website: "",
+  formStartedAt: Date.now() - 5000,
+};
+
 test("GET /api/health returns the backend status", async () => {
   const res = await request(app).get("/api/health");
 
@@ -137,4 +148,41 @@ test("POST /api/support rejects an invalid priority", async () => {
 
   assert.equal(res.status, 400);
   assert.ok(res.body.errors.priority);
+});
+
+test("POST /api/assessment accepts a valid submission", async () => {
+  const res = await request(app)
+    .post("/api/assessment")
+    .send(validAssessmentRequest);
+
+  assert.equal(res.status, 200);
+  assert.equal(
+    res.body.message,
+    "Your free network assessment request has been submitted successfully.",
+  );
+});
+
+test("POST /api/assessment requires a phone number when phone is preferred", async () => {
+  const res = await request(app)
+    .post("/api/assessment")
+    .send({
+      ...validAssessmentRequest,
+      phone: "",
+      preferredContact: "phone",
+    });
+
+  assert.equal(res.status, 400);
+  assert.ok(res.body.errors.phone);
+});
+
+test("POST /api/assessment intercepts a filled honeypot", async () => {
+  const res = await request(app)
+    .post("/api/assessment")
+    .send({
+      ...validAssessmentRequest,
+      website: "https://spam.example",
+    });
+
+  assert.equal(res.status, 200);
+  assert.equal(res.body.message, "Submission received.");
 });

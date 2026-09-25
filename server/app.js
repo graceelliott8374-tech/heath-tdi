@@ -6,21 +6,11 @@ import helmet from "helmet";
 
 import contactRouter from "./contact.js";
 import supportRouter from "./support.js";
+import assessmentRouter from "./assessment.js";
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
-/*
- * CLIENT_ORIGIN may contain one address or multiple comma-separated addresses.
- *
- * LOCAL DEVELOPMENT:
- * CLIENT_ORIGIN=http://localhost:5173
- *
- * FRIDAY DEPLOYMENT — set this in the backend Vercel project:
- * CLIENT_ORIGIN=https://heathtdi.com,https://www.heathtdi.com
- *
- * Do not include trailing slashes.
- */
 const allowedOrigins = (process.env.CLIENT_ORIGIN || "http://localhost:5173")
   .split(",")
   .map((origin) => origin.trim())
@@ -58,6 +48,7 @@ app.get("/api/health", (req, res) => {
 
 app.use("/api/contact", contactRouter);
 app.use("/api/support", supportRouter);
+app.use("/api/assessment", assessmentRouter);
 
 app.use("/api", (req, res) => {
   res.status(404).json({

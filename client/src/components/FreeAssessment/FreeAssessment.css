@@ -1,0 +1,135 @@
+.free-assessment {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #021526 0%, #063451 50%, #021526 100%);
+}
+
+.free-assessment__content {
+  max-width: 1100px;
+}
+
+.free-assessment__text {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.free-assessment__eyebrow {
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.free-assessment h2 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.free-assessment__intro {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: rgb(255 255 255 / 0.85);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.free-assessment__features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.free-assessment__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 120px;
+  padding: 1.25rem;
+
+  color: #ffffff;
+  background: rgb(255 255 255 / 0.05);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: var(--radius-md);
+}
+
+.free-assessment__feature svg {
+  color: var(--color-accent);
+}
+
+.free-assessment__feature span {
+  font-weight: 600;
+}
+
+.free-assessment__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+
+  background: var(--color-accent);
+  border-radius: var(--radius-sm);
+
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    transform var(--transition),
+    background-color var(--transition);
+}
+
+.free-assessment__button:hover {
+  transform: translateY(-3px);
+  background-color: #28dbc2;
+}
+
+.free-assessment__button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width: 900px) {
+  .free-assessment__features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 600px) {
+  .free-assessment {
+    padding: 4rem 0;
+  }
+
+  .free-assessment__intro {
+    font-size: 1rem;
+  }
+
+  .free-assessment__features {
+    grid-template-columns: 1fr;
+  }
+
+  .free-assessment__feature {
+    min-height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .free-assessment__button {
+    width: 100%;
+  }
+}

@@ -140,20 +140,19 @@ function Contact() {
             </h2>
 
             <p>
-              4810 Technology Drive, Suite 4
+              4976 Hereford Road
               <br />
-              Martinez, GA 30907
+              Evans, GA 30809
             </p>
           </div>
 
           <div className="contact__map-wrapper">
             <iframe
-              src="https://www.google.com/maps?q=4810+Technology+Drive+Suite+4+Martinez+GA+30907&output=embed"
-              title="Map showing Heath Telephone and Data at 4810 Technology Drive, Suite 4, Martinez, Georgia"
+              src="https://www.google.com/maps?q=4976+Hereford+Road+Evans+GA+30809&output=embed"
+              title="Map showing Heath Telephone and Data at 4976 Hereford Road, Evans, Georgia"
               className="contact__map"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
             />
           </div>
         </div>

@@ -1,0 +1,307 @@
+/* ==========================
+   Free Network Assessment Page
+========================== */
+
+.assessment-page {
+  width: 100%;
+  background: var(--color-primary-dark);
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.assessment-page__hero {
+  padding: 7rem 0;
+  background:
+    linear-gradient(rgb(5 18 40 / 0.78), rgb(5 18 40 / 0.88)),
+    url("../../assets/images/hero/background.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.assessment-page__hero-content {
+  max-width: 800px;
+}
+
+.assessment-page__eyebrow {
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.assessment-page__hero h1 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  line-height: 1.08;
+}
+
+.assessment-page__hero p:not(.assessment-page__eyebrow) {
+  max-width: 650px;
+  color: rgb(255 255 255 / 0.88);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* ==========================
+   Form Section
+========================== */
+
+.assessment-page__form-section {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #06152e 0%, #0b2944 100%);
+}
+
+.assessment-page__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: 4rem;
+}
+
+.assessment-page__intro h2 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.assessment-page__intro p:not(.assessment-page__eyebrow) {
+  margin-bottom: 1rem;
+  color: rgb(255 255 255 / 0.82);
+  line-height: 1.7;
+}
+
+/* ==========================
+   Form
+========================== */
+
+.assessment-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+
+  padding: 2.5rem;
+
+  background: rgb(255 255 255 / 0.06);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: var(--radius-md);
+
+  box-shadow: 0 20px 45px rgb(0 0 0 / 0.25);
+}
+
+.assessment-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.assessment-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.assessment-form__field label,
+.assessment-form__contact legend {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.assessment-form__field label span {
+  color: var(--color-accent);
+}
+
+.assessment-form input,
+.assessment-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+
+  border: 1px solid rgb(255 255 255 / 0.18);
+  border-radius: var(--radius-sm);
+
+  background: rgb(255 255 255 / 0.96);
+  color: #07182a;
+
+  font: inherit;
+
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.assessment-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.assessment-form input:focus,
+.assessment-form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgb(32 201 176 / 0.2);
+}
+
+.assessment-form textarea::placeholder {
+  color: #65717d;
+}
+
+/* ==========================
+   Contact Preference
+========================== */
+
+.assessment-form__contact {
+  grid-column: 1 / -1;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.assessment-form__contact legend {
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.assessment-form__contact label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: rgb(255 255 255 / 0.88);
+  cursor: pointer;
+}
+
+.assessment-form__contact input {
+  width: auto;
+  accent-color: var(--color-accent);
+}
+
+/* ==========================
+   Submit
+========================== */
+
+.assessment-form__submit {
+  grid-column: 1 / -1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 1.5rem;
+
+  border: 0;
+  border-radius: var(--radius-sm);
+
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+
+  font: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.assessment-form__submit:hover {
+  background: #28dbc2;
+  transform: translateY(-2px);
+}
+
+.assessment-form__submit:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
+.assessment-form__required {
+  grid-column: 1 / -1;
+
+  margin: -0.5rem 0 0;
+
+  color: rgb(255 255 255 / 0.65);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ==========================
+   Honeypot
+========================== */
+
+.assessment-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width: 900px) {
+  .assessment-page__hero {
+    background-attachment: scroll;
+  }
+
+  .assessment-page__layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .assessment-page__intro {
+    max-width: 700px;
+  }
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 600px) {
+  .assessment-page__hero {
+    padding: 4rem 0;
+  }
+
+  .assessment-page__hero h1 {
+    font-size: clamp(2.4rem, 11vw, 3.25rem);
+  }
+
+  .assessment-page__hero p:not(.assessment-page__eyebrow) {
+    font-size: 1rem;
+  }
+
+  .assessment-page__form-section {
+    padding: 4rem 0;
+  }
+
+  .assessment-page__layout {
+    gap: 2rem;
+  }
+
+  .assessment-form {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .assessment-form__field,
+  .assessment-form__field--full,
+  .assessment-form__contact,
+  .assessment-form__submit,
+  .assessment-form__required {
+    grid-column: 1;
+  }
+}

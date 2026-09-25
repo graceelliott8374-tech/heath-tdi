@@ -22,6 +22,7 @@ import CloudSolutions from "../pages/Services/CloudSolutions/CloudSolutions";
 import WhoWeServe from "../pages/WhoWeServe/WhoWeServe";
 import Contact from "../pages/Contact/Contact";
 import Support from "../pages/Support/Support";
+import FreeNetworkAssessment from "../pages/FreeNetworkAssessment/FreeNetworkAssessment";
 
 // Admin Pages
 import Admin from "../pages/Admin/Admin";
@@ -98,6 +99,10 @@ export const router = createBrowserRouter([
       {
         path: "support",
         element: <Support />,
+      },
+      {
+        path: "free-network-assessment",
+        element: <FreeNetworkAssessment />,
       },
       {
         path: "*",
