@@ -2,6 +2,7 @@ import "./FreeNetworkAssessment.css";
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { submitAssessmentForm } from "../../api/forms";
+import SEO from "../../components/SEO/SEO";
 
 function FreeNetworkAssessment() {
   const formStartedAt = useRef(Date.now());
@@ -27,81 +28,87 @@ function FreeNetworkAssessment() {
     }));
   }
 
- async function handleSubmit(event) {
-   event.preventDefault();
+  async function handleSubmit(event) {
+    event.preventDefault();
 
-   if (isSubmitting) {
-     return;
-   }
+    if (isSubmitting) {
+      return;
+    }
 
-   if (formData.website.trim()) {
-     return;
-   }
+    if (formData.website.trim()) {
+      return;
+    }
 
-   if (Date.now() - formStartedAt.current < 3000) {
-     toast.error("Please wait a moment and try again.");
-     return;
-   }
+    if (Date.now() - formStartedAt.current < 3000) {
+      toast.error("Please wait a moment and try again.");
+      return;
+    }
 
-   if (formData.preferredContact === "phone" && !formData.phone.trim()) {
-     toast.error(
-       "Please enter a phone number if you prefer to be contacted by phone.",
-     );
-     return;
-   }
+    if (formData.preferredContact === "phone" && !formData.phone.trim()) {
+      toast.error(
+        "Please enter a phone number if you prefer to be contacted by phone.",
+      );
+      return;
+    }
 
-   const submission = {
-     ...formData,
-     formStartedAt: formStartedAt.current,
-   };
+    const submission = {
+      ...formData,
+      formStartedAt: formStartedAt.current,
+    };
 
-   setIsSubmitting(true);
+    setIsSubmitting(true);
 
-   const toastId = toast.loading("Sending your assessment request...");
+    const toastId = toast.loading("Sending your assessment request...");
 
-   try {
-     const data = await submitAssessmentForm(submission);
+    try {
+      const data = await submitAssessmentForm(submission);
 
-     toast.update(toastId, {
-       render:
-         data.message ||
-         "Your free network assessment request has been submitted successfully.",
-       type: "success",
-       isLoading: false,
-       autoClose: 4000,
-       closeOnClick: true,
-     });
+      toast.update(toastId, {
+        render:
+          data.message ||
+          "Your free network assessment request has been submitted successfully.",
+        type: "success",
+        isLoading: false,
+        autoClose: 4000,
+        closeOnClick: true,
+      });
 
-     setFormData({
-       name: "",
-       company: "",
-       email: "",
-       phone: "",
-       concerns: "",
-       preferredContact: "email",
-       website: "",
-     });
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        concerns: "",
+        preferredContact: "email",
+        website: "",
+      });
 
-     formStartedAt.current = Date.now();
-   } catch (error) {
-     const message =
-       error.response?.data?.message ||
-       "We could not send your assessment request. Please try again.";
+      formStartedAt.current = Date.now();
+    } catch (error) {
+      const message =
+        error.response?.data?.message ||
+        "We could not send your assessment request. Please try again.";
 
-     toast.update(toastId, {
-       render: message,
-       type: "error",
-       isLoading: false,
-       autoClose: 5000,
-       closeOnClick: true,
-     });
-   } finally {
-     setIsSubmitting(false);
-   }
- }
+      toast.update(toastId, {
+        render: message,
+        type: "error",
+        isLoading: false,
+        autoClose: 5000,
+        closeOnClick: true,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <main className="assessment-page">
+      <SEO
+        title="Free Network Assessment | Heath Telephone & Data"
+        description="Request a free network assessment from Heath Telephone & Data to identify network performance, WiFi, equipment, security, and infrastructure concerns across the CSRA and surrounding areas."
+        canonicalPath="/free-network-assessment"
+      />
+
       <section className="assessment-page__hero">
         <div className="container assessment-page__hero-content">
           <p className="assessment-page__eyebrow">Free Network Assessment</p>
@@ -248,7 +255,7 @@ function FreeNetworkAssessment() {
                 name="website"
                 value={formData.website}
                 onChange={handleChange}
-                tabIndex="-1"
+                tabIndex={-1}
                 autoComplete="off"
               />
             </div>

@@ -1,20 +1,27 @@
 import "./WhoWeServe.css";
+import SEO from "../../components/SEO/SEO";
 import CallToAction from "../../components/CallToAction/CallToAction";
+
 import {
-  Buildings,
-  FirstAidKit,
-  GraduationCap,
-  Factory,
-  Storefront,
-  Church,
-  TreeStructure,
-  CheckCircle,
+  BuildingsIcon,
+  FirstAidKitIcon,
+  GraduationCapIcon,
+  FactoryIcon,
+  StorefrontIcon,
+  ChurchIcon,
+  TreeStructureIcon,
+  CheckCircleIcon,
 } from "@phosphor-icons/react";
 
 function WhoWeServe() {
   return (
     <main className="who-we-serve">
-      {/* Hero */}
+      <SEO
+        title="Industries We Serve | Heath Telephone & Data"
+        description="Heath Telephone & Data provides IT, networking, communications, cybersecurity, and infrastructure solutions for organizations across the CSRA and surrounding areas."
+        canonicalPath="/who-we-serve"
+      />
+
       <section className="who-we-serve__hero">
         <div className="container who-we-serve__hero-overlay">
           <div className="container">
@@ -52,7 +59,7 @@ function WhoWeServe() {
         <div className="container">
           <div className="who-we-serve__grid">
             <article className="industry-card">
-              <Buildings
+              <BuildingsIcon
                 className="industry-card__icon"
                 size={48}
                 weight="duotone"
@@ -69,7 +76,7 @@ function WhoWeServe() {
             </article>
 
             <article className="industry-card">
-              <FirstAidKit
+              <FirstAidKitIcon
                 className="industry-card__icon"
                 size={48}
                 weight="duotone"
@@ -86,7 +93,7 @@ function WhoWeServe() {
             </article>
 
             <article className="industry-card">
-              <GraduationCap
+              <GraduationCapIcon
                 className="industry-card__icon"
                 size={48}
                 weight="duotone"
@@ -102,7 +109,7 @@ function WhoWeServe() {
             </article>
 
             <article className="industry-card">
-              <Factory
+              <FactoryIcon
                 className="industry-card__icon"
                 size={48}
                 weight="duotone"
@@ -119,7 +126,7 @@ function WhoWeServe() {
             </article>
 
             <article className="industry-card">
-              <Storefront
+              <StorefrontIcon
                 className="industry-card__icon"
                 size={48}
                 weight="duotone"
@@ -136,7 +143,7 @@ function WhoWeServe() {
             </article>
 
             <article className="industry-card">
-              <Church
+              <ChurchIcon
                 className="industry-card__icon"
                 size={48}
                 weight="duotone"
@@ -161,7 +168,7 @@ function WhoWeServe() {
         <div className="container">
           <div className="who-we-serve__section-content">
             <div className="who-we-serve__image-wrapper">
-              <TreeStructure
+              <TreeStructureIcon
                 className="who-we-serve__feature-icon"
                 size={320}
                 weight="duotone"
@@ -215,7 +222,7 @@ function WhoWeServe() {
               <div className="who-we-serve__services-grid">
                 <ul>
                   <li>
-                    <CheckCircle
+                    <CheckCircleIcon
                       className="who-we-serve__check"
                       size={22}
                       weight="fill"
@@ -224,7 +231,7 @@ function WhoWeServe() {
                   </li>
 
                   <li>
-                    <CheckCircle
+                    <CheckCircleIcon
                       className="who-we-serve__check"
                       size={22}
                       weight="fill"
@@ -233,7 +240,7 @@ function WhoWeServe() {
                   </li>
 
                   <li>
-                    <CheckCircle
+                    <CheckCircleIcon
                       className="who-we-serve__check"
                       size={22}
                       weight="fill"
@@ -244,7 +251,7 @@ function WhoWeServe() {
 
                 <ul>
                   <li>
-                    <CheckCircle
+                    <CheckCircleIcon
                       className="who-we-serve__check"
                       size={22}
                       weight="fill"
@@ -253,7 +260,7 @@ function WhoWeServe() {
                   </li>
 
                   <li>
-                    <CheckCircle
+                    <CheckCircleIcon
                       className="who-we-serve__check"
                       size={22}
                       weight="fill"
@@ -262,7 +269,7 @@ function WhoWeServe() {
                   </li>
 
                   <li>
-                    <CheckCircle
+                    <CheckCircleIcon
                       className="who-we-serve__check"
                       size={22}
                       weight="fill"
@@ -273,7 +280,7 @@ function WhoWeServe() {
 
                 <ul>
                   <li>
-                    <CheckCircle
+                    <CheckCircleIcon
                       className="who-we-serve__check"
                       size={22}
                       weight="fill"
@@ -282,7 +289,7 @@ function WhoWeServe() {
                   </li>
 
                   <li>
-                    <CheckCircle
+                    <CheckCircleIcon
                       className="who-we-serve__check"
                       size={22}
                       weight="fill"
@@ -291,7 +298,7 @@ function WhoWeServe() {
                   </li>
 
                   <li>
-                    <CheckCircle
+                    <CheckCircleIcon
                       className="who-we-serve__check"
                       size={22}
                       weight="fill"

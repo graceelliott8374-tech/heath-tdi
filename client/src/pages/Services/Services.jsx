@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import SEO from "../../components/SEO/SEO";
 
 import "./Services.css";
 import serverRack from "../../assets/images/services/serverRack.jpg";
@@ -80,6 +81,12 @@ const services = [
 function Services() {
   return (
     <main className="services-page">
+      <SEO
+        title="IT & Technology Services | Heath Telephone & Data"
+        description="Explore managed IT, networking, WiFi, structured cabling, fiber optics, communications, cybersecurity, surveillance, and cloud solutions across the CSRA and surrounding areas."
+        canonicalPath="/services"
+      />
+
       <section className="services-hero">
         <div className="services-hero__overlay">
           <div className="container services-hero__content">

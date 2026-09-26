@@ -1,17 +1,24 @@
 import "./About.css";
 import technician from "../../assets/images/other/technician.jpg";
 import ringoSweater from "../../assets/images/ringo/Ringo_Sweater.png";
+import SEO from "../../components/SEO/SEO";
 
 import {
-  ClipboardText,
-  Wrench,
-  Headset,
-  Handshake,
+  ClipboardTextIcon,
+  WrenchIcon,
+  HeadsetIcon,
+  HandshakeIcon,
 } from "@phosphor-icons/react";
 
 function About() {
   return (
     <section className="about">
+      <SEO
+        title="About Heath Telephone & Data | Augusta, GA"
+        description="Learn about Heath Telephone & Data, a locally owned technology company providing IT, networking, communications, and infrastructure solutions to businesses across the CSRA and surrounding areas."
+        canonicalPath="/about"
+      />
+
       <section className="about-hero">
         <div className="about-hero__overlay">
           <div className="container about-hero__content">
@@ -77,7 +84,11 @@ function About() {
           <div className="how-we-work__grid">
             <div className="work-card">
               <div className="work-card__icon">
-                <ClipboardText size={36} weight="duotone" aria-hidden="true" />
+                <ClipboardTextIcon
+                  size={36}
+                  weight="duotone"
+                  aria-hidden="true"
+                />
               </div>
 
               <h3>Planning First</h3>
@@ -91,7 +102,7 @@ function About() {
 
             <div className="work-card">
               <div className="work-card__icon">
-                <Wrench size={36} weight="duotone" aria-hidden="true" />
+                <WrenchIcon size={36} weight="duotone" aria-hidden="true" />
               </div>
 
               <h3>Professional Installation</h3>
@@ -104,7 +115,7 @@ function About() {
 
             <div className="work-card">
               <div className="work-card__icon">
-                <Headset size={36} weight="duotone" aria-hidden="true" />
+                <HeadsetIcon size={36} weight="duotone" aria-hidden="true" />
               </div>
 
               <h3>Responsive Support</h3>
@@ -118,7 +129,7 @@ function About() {
 
             <div className="work-card">
               <div className="work-card__icon">
-                <Handshake size={36} weight="duotone" aria-hidden="true" />
+                <HandshakeIcon size={36} weight="duotone" aria-hidden="true" />
               </div>
 
               <h3>Long-Term Partnership</h3>

@@ -1,5 +1,5 @@
 import "./Cybersecurity.css";
-
+import SEO from "../../../components/SEO/SEO";
 
 import cybersecurityAnalyst from "../../../assets/images/services/cybersecurity3.jpg";
 import cybersecurityLock from "../../../assets/images/services/cybersecurity4.jpg";
@@ -8,7 +8,11 @@ import secureChip from "../../../assets/images/services/secureChip.jpg";
 function Cybersecurity() {
   return (
     <main className="cybersecurity">
-      {/* Hero */}
+      <SEO
+        title="Business Cybersecurity Services | Heath Telephone & Data"
+        description="Cybersecurity solutions from Heath Telephone & Data help protect business networks, devices, users, and critical data across the CSRA and surrounding areas."
+        canonicalPath="/services/cybersecurity"
+      />
 
       <section className="cybersecurity__hero">
         <div className="container cybersecurity__hero-overlay">

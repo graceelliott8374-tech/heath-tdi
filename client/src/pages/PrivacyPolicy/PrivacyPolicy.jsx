@@ -1,8 +1,15 @@
 import "./PrivacyPolicy.css";
+import SEO from "../../components/SEO/SEO";
 
 function PrivacyPolicy() {
   return (
     <main className="privacy-policy">
+      <SEO
+        title="Privacy Policy | Heath Telephone & Data"
+        description="Read the Heath Telephone & Data privacy policy to learn how information submitted through heathtdi.com is collected, used, protected, and managed."
+        canonicalPath="/privacy-policy"
+      />
+
       <section className="privacy-policy__hero">
         <div className="container privacy-policy__hero-content">
           <p className="privacy-policy__eyebrow">Your Privacy</p>

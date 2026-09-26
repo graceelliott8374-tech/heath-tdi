@@ -1,4 +1,5 @@
 import "./NetworkSolutions.css";
+import SEO from "../../../components/SEO/SEO";
 
 import routerSwitch from "../../../assets/images/services/routerSwitch.jpg";
 import switch1 from "../../../assets/images/services/switch1.jpg";
@@ -7,6 +8,12 @@ import technician3 from "../../../assets/images/services/technician3.jpg";
 function NetworkSolutions() {
   return (
     <main className="network-solutions">
+      <SEO
+        title="Business Network Solutions | Heath Telephone & Data"
+        description="Business network design, installation, configuration, and support from Heath Telephone & Data, providing dependable connectivity for organizations across the CSRA and surrounding areas."
+        canonicalPath="/services/network-solutions"
+      />
+
       <section className="network-solutions__hero">
         <div className="network-solutions__hero-overlay">
           <div className="container">

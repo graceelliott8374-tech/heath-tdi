@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { CaretDown, List, X } from "@phosphor-icons/react";
+import { CaretDownIcon, ListIcon, XIcon } from "@phosphor-icons/react";
 
 import "./Navbar.css";
 
@@ -76,9 +76,9 @@ function Navbar() {
           onClick={() => setIsMenuOpen((current) => !current)}
         >
           {isMenuOpen ? (
-            <X size={28} aria-hidden="true" />
+            <XIcon size={28} aria-hidden="true" />
           ) : (
-            <List size={28} aria-hidden="true" />
+            <ListIcon size={28} aria-hidden="true" />
           )}
         </button>
 
@@ -115,7 +115,7 @@ function Navbar() {
                 aria-expanded={isServicesOpen}
                 onClick={() => setIsServicesOpen((current) => !current)}
               >
-                <CaretDown size={16} aria-hidden="true" />
+                <CaretDownIcon size={16} aria-hidden="true" />
               </button>
             </div>
 
@@ -131,7 +131,7 @@ function Navbar() {
           </li>
 
           <li>
-            <NavLink to="/whoweserve" onClick={closeMenus}>
+            <NavLink to="/who-we-serve" onClick={closeMenus}>
               Who We Serve
             </NavLink>
           </li>

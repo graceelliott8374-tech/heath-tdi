@@ -1,4 +1,5 @@
 import "./WiFiWireless.css";
+import SEO from "../../../components/SEO/SEO";
 
 import wifi1 from "../../../assets/images/services/wifi1.jpg";
 import wifi2 from "../../../assets/images/services/wifi2.jpg";
@@ -7,6 +8,12 @@ import guestWifi from "../../../assets/images/services/guestWifi.jpg";
 function WiFiWireless() {
   return (
     <article className="wifi-wireless">
+      <SEO
+        title="Business WiFi & Wireless Solutions | Heath Telephone & Data"
+        description="Business WiFi design, installation, coverage optimization, and secure wireless networking from Heath Telephone & Data across the CSRA and surrounding areas."
+        canonicalPath="/services/wifi-wireless"
+      />
+
       <section className="wifi-wireless__hero">
         <div className="wifi-wireless__hero-overlay">
           <div className="container wifi-wireless__hero-content">

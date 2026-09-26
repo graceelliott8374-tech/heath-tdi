@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import Button from "../../components/Button/Button";
 import { submitSupportForm } from "../../api/forms";
 import RingoTruck from "../../assets/images/ringo/Ringo_Truck.jpg";
+import SEO from "../../components/SEO/SEO";
 import "./Support.css";
 
 function Support() {
@@ -90,7 +91,11 @@ function Support() {
 
   return (
     <main className="support">
-      {/* Hero */}
+      <SEO
+        title="Technical Support | Heath Telephone & Data"
+        description="Existing Heath Telephone & Data clients can submit technical support requests for IT, networking, communications, cabling, cybersecurity, and other supported systems."
+        canonicalPath="/support"
+      />
 
       <section className="support__hero">
         <div className="support__hero-overlay">

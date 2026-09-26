@@ -1,4 +1,5 @@
 import "./StructuredCabling.css";
+import SEO from "../../../components/SEO/SEO";
 
 import technician2 from "../../../assets/images/services/technician2.jpg";
 import cable2 from "../../../assets/images/services/cable2.jpg";
@@ -7,6 +8,12 @@ import cable1 from "../../../assets/images/services/cable1.jpg";
 function StructuredCabling() {
   return (
     <article className="structured-cabling">
+      <SEO
+        title="Structured Cabling Services | Heath Telephone & Data"
+        description="Professional structured cabling design and installation for voice, data, and network infrastructure across the CSRA and surrounding areas."
+        canonicalPath="/services/structured-cabling"
+      />
+
       <section className="structured-cabling__hero">
         <div className="structured-cabling__hero-overlay">
           <div className="container structured-cabling__hero-content">

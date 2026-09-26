@@ -1,5 +1,5 @@
 import "./CloudSolutions.css";
-
+import SEO from "../../../components/SEO/SEO";
 
 import cloudInfrastructure from "../../../assets/images/services/cloud4.jpg";
 import cloudConnectivity from "../../../assets/images/services/cloud2.jpg";
@@ -8,7 +8,12 @@ import cloudApplications from "../../../assets/images/services/cloud3.jpg";
 function CloudSolutions() {
   return (
     <main className="cloud-solutions">
-      {/* Hero */}
+      <SEO
+        title="Cloud & Hybrid IT Solutions | Heath Telephone & Data"
+        description="Cloud, local, and hybrid infrastructure solutions from Heath Telephone & Data, designed around the needs of businesses across the CSRA and surrounding areas."
+        canonicalPath="/services/cloud-solutions"
+      />
+
       <section className="cloud-solutions__hero">
         <div className="container cloud-solutions__hero-overlay">
           <div className="cloud-solutions__hero-content">

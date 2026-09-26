@@ -1,4 +1,5 @@
 import "./SecuritySurveillance.css";
+import SEO from "../../../components/SEO/SEO";
 
 import CameraTwo from "../../../assets/images/other/camera2.jpg";
 import CameraFive from "../../../assets/images/other/camera5.jpg";
@@ -7,6 +8,12 @@ import CameraThree from "../../../assets/images/other/camera3.jpg";
 function SecuritySurveillance() {
   return (
     <article className="security-surveillance">
+      <SEO
+        title="Business Security & Surveillance | Heath Telephone & Data"
+        description="Business security camera and surveillance system design and installation from Heath Telephone & Data across the CSRA and surrounding areas."
+        canonicalPath="/services/security-surveillance"
+      />
+
       <section className="security-surveillance__hero">
         <div className="security-surveillance__hero-overlay">
           <div className="container security-surveillance__hero-content">

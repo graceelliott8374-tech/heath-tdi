@@ -1,4 +1,5 @@
 import "./FiberOptics.css";
+import SEO from "../../../components/SEO/SEO";
 
 import fiberTechnician from "../../../assets/images/services/fiberTechnician.jpg";
 import fiberOptic1 from "../../../assets/images/services/fiberOptic1.jpg";
@@ -7,6 +8,12 @@ import fiberopticServer from "../../../assets/images/services/fiberopticServer.j
 function FiberOptics() {
   return (
     <article className="fiber-optics">
+      <SEO
+        title="Fiber Optic Installation & Services | Heath Telephone & Data"
+        description="Professional fiber optic installation, testing, repair, and infrastructure solutions for high-speed business connectivity across the CSRA and surrounding areas."
+        canonicalPath="/services/fiber-optics"
+      />
+
       <section className="fiber-optics__hero">
         <div className="fiber-optics__hero-overlay">
           <div className="container fiber-optics__hero-content">

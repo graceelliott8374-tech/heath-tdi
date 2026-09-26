@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import { submitContactForm } from "../../api/forms";
+import SEO from "../../components/SEO/SEO";
 import "./Contact.css";
 
 function Contact() {
@@ -83,7 +84,11 @@ function Contact() {
 
   return (
     <main className="contact">
-      {/* Hero */}
+      <SEO
+        title="Contact Heath Telephone & Data | Evans, GA"
+        description="Contact Heath Telephone & Data for managed IT, networking, cabling, fiber optics, communications, cybersecurity, and technology services across the CSRA and surrounding areas."
+        canonicalPath="/contact"
+      />
 
       <section className="contact__hero">
         <div className="contact__hero-overlay">

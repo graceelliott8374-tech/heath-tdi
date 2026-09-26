@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEO from "../../components/SEO/SEO";
 import { Link } from "react-router-dom";
 
 import RingoError from "../../assets/images/ringo/Ringo_Error.jpg";
@@ -7,10 +7,12 @@ import "./NotFound.css";
 function NotFound() {
   return (
     <main className="not-found" aria-labelledby="not-found-title">
-      <Helmet>
-        <title>Page Not Found | Heath Telephone &amp; Data</title>
-        <meta name="robots" content="noindex" />
-      </Helmet>
+      <SEO
+        title="Page Not Found | Heath Telephone & Data"
+        description="The page you requested could not be found."
+        canonicalPath="/404"
+        robots="noindex, nofollow"
+      />
 
       <div className="container not-found__inner">
         <div className="not-found__content">

@@ -90,7 +90,7 @@ export const router = createBrowserRouter([
         element: <CloudSolutions />,
       },
       {
-        path: "whoweserve",
+        path: "who-we-serve",
         element: <WhoWeServe />,
       },
       {
