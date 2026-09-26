@@ -23,6 +23,7 @@ import WhoWeServe from "../pages/WhoWeServe/WhoWeServe";
 import Contact from "../pages/Contact/Contact";
 import Support from "../pages/Support/Support";
 import FreeNetworkAssessment from "../pages/FreeNetworkAssessment/FreeNetworkAssessment";
+import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 
 // Admin Pages
 import Admin from "../pages/Admin/Admin";
@@ -103,6 +104,10 @@ export const router = createBrowserRouter([
       {
         path: "free-network-assessment",
         element: <FreeNetworkAssessment />,
+      },
+      {
+        path: "privacy-policy",
+        element: <PrivacyPolicy />,
       },
       {
         path: "*",
