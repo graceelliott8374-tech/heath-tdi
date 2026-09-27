@@ -1,5 +1,6 @@
 import "./CloudSolutions.css";
 import SEO from "../../../components/SEO/SEO";
+import ServiceStructuredData from "../../../components/StructuredData/ServiceStructuredData";
 
 import cloudInfrastructure from "../../../assets/images/services/cloud4.jpg";
 import cloudConnectivity from "../../../assets/images/services/cloud2.jpg";
@@ -12,6 +13,11 @@ function CloudSolutions() {
         title="Cloud & Hybrid IT Solutions | Heath Telephone & Data"
         description="Cloud, local, and hybrid infrastructure solutions from Heath Telephone & Data, designed around the needs of businesses across the CSRA and surrounding areas."
         canonicalPath="/services/cloud-solutions"
+      />
+      <ServiceStructuredData
+        name="Cloud & Hybrid IT Solutions"
+        description="Cloud, local, and hybrid infrastructure solutions designed around the needs of businesses across the CSRA and surrounding areas."
+        url="/services/cloud-solutions"
       />
 
       <section className="cloud-solutions__hero">

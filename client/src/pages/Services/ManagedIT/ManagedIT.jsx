@@ -1,6 +1,7 @@
 import "./ManagedIT.css";
 import FreeAssessment from "../../../components/FreeAssessment/FreeAssessment";
 import SEO from "../../../components/SEO/SEO";
+import ServiceStructuredData from "../../../components/StructuredData/ServiceStructuredData";
 
 import serverRack from "../../../assets/images/services/serverRack.jpg";
 import rack2 from "../../../assets/images/services/rack2.jpg";
@@ -13,6 +14,11 @@ function ManagedIT() {
         title="Managed IT Services | Heath Telephone & Data"
         description="Managed IT services from Heath Telephone & Data provide proactive monitoring, maintenance, technical support, and technology planning for businesses across the CSRA and surrounding areas."
         canonicalPath="/services/managed-it"
+      />
+      <ServiceStructuredData
+        name="Managed IT Services"
+        description="Proactive monitoring, maintenance, technical support, and technology planning for businesses across the CSRA and surrounding areas."
+        url="/services/managed-it"
       />
 
       <section className="managed-it__hero">

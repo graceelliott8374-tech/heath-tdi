@@ -1,5 +1,6 @@
 import "./NetworkSolutions.css";
 import SEO from "../../../components/SEO/SEO";
+import ServiceStructuredData from "../../../components/StructuredData/ServiceStructuredData";
 
 import routerSwitch from "../../../assets/images/services/routerSwitch.jpg";
 import switch1 from "../../../assets/images/services/switch1.jpg";
@@ -12,6 +13,11 @@ function NetworkSolutions() {
         title="Business Network Solutions | Heath Telephone & Data"
         description="Business network design, installation, configuration, and support from Heath Telephone & Data, providing dependable connectivity for organizations across the CSRA and surrounding areas."
         canonicalPath="/services/network-solutions"
+      />
+      <ServiceStructuredData
+        name="Network Solutions"
+        description="Business network design, installation, configuration, and support for dependable connectivity across the CSRA and surrounding areas."
+        url="/services/network-solutions"
       />
 
       <section className="network-solutions__hero">

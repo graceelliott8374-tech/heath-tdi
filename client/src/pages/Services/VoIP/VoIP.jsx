@@ -1,5 +1,6 @@
 import "./VoIP.css";
 import SEO from "../../../components/SEO/SEO";
+import ServiceStructuredData from "../../../components/StructuredData/ServiceStructuredData";
 
 import voipPhone4 from "../../../assets/images/services/VOIPphone4.jpg";
 import voipPhone2 from "../../../assets/images/services/VOIPphone2.jpg";
@@ -12,6 +13,11 @@ function VoIP() {
         title="Business VoIP & Communication Systems | Heath Telephone & Data"
         description="Business VoIP, digital telephone, paging, installation, and communication system support from Heath Telephone & Data across the CSRA and surrounding areas."
         canonicalPath="/services/voip"
+      />
+      <ServiceStructuredData
+        name="Business VoIP & Communication Systems"
+        description="Business VoIP, digital telephone, paging, installation, and communication system support across the CSRA and surrounding areas."
+        url="/services/voip"
       />
 
       <section className="voip__hero">

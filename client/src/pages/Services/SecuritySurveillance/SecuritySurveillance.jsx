@@ -1,5 +1,6 @@
 import "./SecuritySurveillance.css";
 import SEO from "../../../components/SEO/SEO";
+import ServiceStructuredData from "../../../components/StructuredData/ServiceStructuredData";
 
 import CameraTwo from "../../../assets/images/other/camera2.jpg";
 import CameraFive from "../../../assets/images/other/camera5.jpg";
@@ -12,6 +13,11 @@ function SecuritySurveillance() {
         title="Business Security & Surveillance | Heath Telephone & Data"
         description="Business security camera and surveillance system design and installation from Heath Telephone & Data across the CSRA and surrounding areas."
         canonicalPath="/services/security-surveillance"
+      />
+      <ServiceStructuredData
+        name="Business Security & Surveillance"
+        description="Business security camera and surveillance system design and installation across the CSRA and surrounding areas."
+        url="/services/security-surveillance"
       />
 
       <section className="security-surveillance__hero">

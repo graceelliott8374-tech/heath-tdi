@@ -1,5 +1,6 @@
 import "./WiFiWireless.css";
 import SEO from "../../../components/SEO/SEO";
+import ServiceStructuredData from "../../../components/StructuredData/ServiceStructuredData";
 
 import wifi1 from "../../../assets/images/services/wifi1.jpg";
 import wifi2 from "../../../assets/images/services/wifi2.jpg";
@@ -12,6 +13,11 @@ function WiFiWireless() {
         title="Business WiFi & Wireless Solutions | Heath Telephone & Data"
         description="Business WiFi design, installation, coverage optimization, and secure wireless networking from Heath Telephone & Data across the CSRA and surrounding areas."
         canonicalPath="/services/wifi-wireless"
+      />
+      <ServiceStructuredData
+        name="Business WiFi & Wireless Solutions"
+        description="Business WiFi design, installation, coverage optimization, and secure wireless networking across the CSRA and surrounding areas."
+        url="/services/wifi-wireless"
       />
 
       <section className="wifi-wireless__hero">

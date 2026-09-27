@@ -1,5 +1,6 @@
 import "./Cybersecurity.css";
 import SEO from "../../../components/SEO/SEO";
+import ServiceStructuredData from "../../../components/StructuredData/ServiceStructuredData";
 
 import cybersecurityAnalyst from "../../../assets/images/services/cybersecurity3.jpg";
 import cybersecurityLock from "../../../assets/images/services/cybersecurity4.jpg";
@@ -12,6 +13,11 @@ function Cybersecurity() {
         title="Business Cybersecurity Services | Heath Telephone & Data"
         description="Cybersecurity solutions from Heath Telephone & Data help protect business networks, devices, users, and critical data across the CSRA and surrounding areas."
         canonicalPath="/services/cybersecurity"
+      />
+      <ServiceStructuredData
+        name="Business Cybersecurity Services"
+        description="Cybersecurity solutions that help protect business networks, devices, users, and critical data across the CSRA and surrounding areas."
+        url="/services/cybersecurity"
       />
 
       <section className="cybersecurity__hero">

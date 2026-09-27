@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import SEO from "../../components/SEO/SEO";
+import ServicesStructuredData from "../../components/StructuredData/ServicesStructuredData";
 
 import "./Services.css";
 import serverRack from "../../assets/images/services/serverRack.jpg";
@@ -86,6 +87,7 @@ function Services() {
         description="Explore managed IT, networking, WiFi, structured cabling, fiber optics, communications, cybersecurity, surveillance, and cloud solutions across the CSRA and surrounding areas."
         canonicalPath="/services"
       />
+      <ServicesStructuredData />
 
       <section className="services-hero">
         <div className="services-hero__overlay">

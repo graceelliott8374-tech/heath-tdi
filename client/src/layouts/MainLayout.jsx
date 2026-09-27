@@ -3,12 +3,14 @@ import TopBar from "../components/TopBar/TopBar";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import StructuredData from "../components/StructuredData/StructuredData";
 
 import "./MainLayout.css";
 
 function MainLayout() {
   return (
     <div className="layout">
+      <StructuredData />
       <ScrollToTop />
 
       <TopBar />
